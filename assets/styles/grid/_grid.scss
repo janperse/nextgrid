@@ -6,328 +6,327 @@
 */
 /* Container main css and it's width */
 .container {
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 12px;
-    padding-left: 12px;
-    /*
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 12px;
+	padding-left: 12px;
+
+	/*
 		Responsive media query
 		On Extra-Small screens and down, container is full width
 	*/
 	/* Width 768px on small devices (768px and more) */
-    @media #{$small-and-up} {
-        width: 768px;
-    }
-    /* Width 936px on medium devices (960px and more) */
-    @media #{$medium-and-up} {
-        width: 960px;
-    }
+	@media #{$small-and-up} {
+		width: 768px;
+	}
+
+	/* Width 936px on medium devices (960px and more) */
+	@media #{$medium-and-up} {
+		width: 960px;
+	}
+
 	/* Width 1140px on large devices (1160px and more) */
-    @media #{$large-and-up} {
-        width: 1140px;
-    }
-    /* Width 1440px on large devices (1440px and more) */
-    @media #{$extra-large-and-up} {
-        width: 1440px;
-    }
+	@media #{$large-and-up} {
+		width: 1140px;
+	}
+
+	/* Width 1440px on large devices (1440px and more) */
+	@media #{$extra-large-and-up} {
+		width: 1440px;
+	}
+
 	/* Different gutter for small screens */
 	@media #{$extra-small-and-down} {
 		padding-right: 8px;
-	    padding-left: 8px;
-    }
+		padding-left: 8px;
+	}
 }
+
 /* Fluid container aka full width */
 .container-fluid {
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 12px;
-    padding-left: 12px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 12px;
+	padding-left: 12px;
+
 	/* Different gutter for small screens */
 	@media #{$small-and-down} {
 		padding-right: 8px;
-	    padding-left: 8px;
-    }
+		padding-left: 8px;
+	}
 }
+
 /* Row is wraper of columns, it removes extra padding of columns left and right to fit container width */
 .row {
-    margin-right: -12px;
-    margin-left: -12px;
+	margin-right: -12px;
+	margin-left: -12px;
 	@media #{$small-and-down} {
 		margin-right: -8px;
-	    margin-left: -8px;
-    }
+		margin-left: -8px;
+	}
 }
+
 /* Main flex class, without this, flex positioning is not working. Use "row" when using columns, if not, use "flex" */
 .flex,
 .row {
-    display: -ms-flex;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 }
+
 /*
 	Flex alignment
 */
 .flex {
-    /*
+	/*
 	  Properties for parents - containers
 		Direction of displayed flex items
 	*/
-    /* Direction of items left to right */
-    &--row {
-        flex-direction: row;
-        -webkit-flex-direction: row;
-    }
-    /* Direction of items right to left */
-    &--row-reverse {
-        flex-direction: row-reverse;
-        -webkit-flex-direction: row-reverse;
-    }
-    /* Direction of items top to bottom */
-    &--column {
-        flex-direction: column;
-        -webkit-flex-direction: column;
-    }
-    /* Direction of items bottom to top */
-    &--column-reverse {
-        flex-direction: column-reverse;
-        -webkit-flex-direction: column-reverse;
-    }
-    /*
+	/* Direction of items left to right */
+	&--row {
+		flex-direction: row;
+	}
+
+	/* Direction of items right to left */
+	&--row-reverse {
+		flex-direction: row-reverse;
+	}
+
+	/* Direction of items top to bottom */
+	&--column {
+		flex-direction: column;
+	}
+
+	/* Direction of items bottom to top */
+	&--column-reverse {
+		flex-direction: column-reverse;
+	}
+
+	/*
 	  Content alignment on main axis - X axis
 	*/
-    /* Justify content left */
-    &--justify-left {
-        justify-content: flex-start;
-        -webkit-justify-content: flex-start;
-    }
-    /* Justify content right */
-    &--justify-right {
-        justify-content: flex-end;
-        -webkit-justify-content: flex-end;
-    }
-    /* Justify content in center */
-    &--justify-center {
-        justify-content: center;
-        -webkit-justify-content: center;
-    }
-    /* Justify content with space between it */
-    &--justify-space-between {
-        justify-content: space-between;
-        -webkit-justify-content: space-between;
-    }
-    /* Justify content with space around it */
-    &--justify-space-around {
-        justify-content: space-around;
-        -webkit-justify-content: space-around;
-    }
-    /*
+	/* Justify content left */
+	&--justify-left {
+		justify-content: flex-start;
+	}
+
+	/* Justify content right */
+	&--justify-right {
+		justify-content: flex-end;
+	}
+
+	/* Justify content in center */
+	&--justify-center {
+		justify-content: center;
+	}
+
+	/* Justify content with space between it */
+	&--justify-space-between {
+		justify-content: space-between;
+	}
+
+	/* Justify content with space around it */
+	&--justify-space-around {
+		justify-content: space-around;
+	}
+
+	/*
 	  Content alignment on cross axis - Y axis
 	*/
-    /* Align items on top */
-    &--align-top {
-        align-items: flex-start;
-        -webkit-align-items: flex-start;
-    }
-    /* Align items on bottom */
-    &--align-bottom {
-        align-items: flex-end;
-        -webkit-align-items: flex-end;
-    }
-    /* Align items vertically in center */
-    &--align-vertical {
-        align-items: center;
-        -webkit-align-items: center;
-    }
-    /* Stretch items to fill container */
-    &--align-stretch {
-        align-items: stretch;
-        -webkit-align-items: stretch;
-    }
-    /* Align items such as their baselines align */
-    &--align-baseline {
-        align-items: baseline;
-        -webkit-align-items: baseline;
-    }
-    /*
+	/* Align items on top */
+	&--align-top {
+		align-items: flex-start;
+	}
+
+	/* Align items on bottom */
+	&--align-bottom {
+		align-items: flex-end;
+	}
+
+	/* Align items vertically in center */
+	&--align-vertical {
+		align-items: center;
+	}
+
+	/* Stretch items to fill container */
+	&--align-stretch {
+		align-items: stretch;
+	}
+
+	/* Align items such as their baselines align */
+	&--align-baseline {
+		align-items: baseline;
+	}
+
+	/*
 	  Content alignment on cross axis - Y axis, but only when there are multiple lines and extra space in container - Y axis
 	*/
-    /* Align content left */
-    &--left {
-        align-content: flex-start;
-        -webkit-align-content: flex-start;
-    }
-    /* Align content right */
-    &--right {
-        align-content: flex-end;
-        -webkit-align-content: flex-end;
-    }
-    /* Align content in center */
-    &--center {
-        align-content: center;
-        -webkit-align-content: center;
-    }
-    /* Stretch content to fill container */
-    &--stretch {
-        align-content: stretch;
-        -webkit-align-content: stretch;
-    }
-    /* Align content with space between */
-    &--space-between {
-        align-content: space-between;
-        -webkit-align-content: space-between;
-    }
-    /* Align content with space around */
-    &--space-around {
-        align-content: space-around;
-        -webkit-align-content: space-around;
-    }
-    /*
+	/* Align content left */
+	&--left {
+		align-content: flex-start;
+	}
+
+	/* Align content right */
+	&--right {
+		align-content: flex-end;
+	}
+
+	/* Align content in center */
+	&--center {
+		align-content: center;
+	}
+
+	/* Stretch content to fill container */
+	&--stretch {
+		align-content: stretch;
+	}
+
+	/* Align content with space between */
+	&--space-between {
+		align-content: space-between;
+	}
+
+	/* Align content with space around */
+	&--space-around {
+		align-content: space-around;
+	}
+
+	/*
 	  Properties for children - flex items
 	*/
-    /* Align flex item on top */
-    &__item-top {
-        align-self: flex-start;
-        -webkit-align-self: flex-start;
-    }
-    /* Align flex item on bottom */
-    &__item-bottom {
-        align-self: flex-end;
-        -webkit-align-self: flex-end;
-    }
-    /* Align flex item in center */
-    &__item-center {
-        align-self: center;
-        -webkit-align-self: center;
-    }
-    /* Align flex item on baseline */
-    &__item-baseline {
-        align-self: baseline;
-        -webkit-align-self: baseline;
-    }
-    /* Stretch flex item to fill container */
-    &__item-stretch {
-        align-self: stretch;
-        -webkit-align-self: stretch;
-    }
+	/* Align flex item on top */
+	&__item-top {
+		align-self: flex-start;
+	}
+
+	/* Align flex item on bottom */
+	&__item-bottom {
+		align-self: flex-end;
+	}
+
+	/* Align flex item in center */
+	&__item-center {
+		align-self: center;
+	}
+
+	/* Align flex item on baseline */
+	&__item-baseline {
+		align-self: baseline;
+	}
+
+	/* Stretch flex item to fill container */
+	&__item-stretch {
+		align-self: stretch;
+	}
 }
+
 /*
 	Columns
 */
 /* Add padding left and right to all columns. Width: 100% added to fill the container if any column size is not defined */
 [class*=' col-'],
 [class^='col-'] {
-    width: 100%;
-    padding-right: 12px;
-    padding-left: 12px;
+	padding-right: 12px;
+	padding-left: 12px;
+	width: 100%;
+
 	/* Different gutter for small screens */
 	@media #{$small-and-down} {
 		padding-right: 8px;
-	    padding-left: 8px;
-    }
+		padding-left: 8px;
+	}
 }
+
 /* Create columns from sizes 1-12 */
-@mixin columns ($class) {
-    .#{$class}-1 {
-        max-width: 8.33333333%;
-        -webkit-flex-basis: 8.33333333%;
-        -ms-flex-preferred-size: 8.33333333%;
-        flex-basis: 8.33333333%;
-    }
-    .#{$class}-2 {
-        max-width: 16.66666667%;
-        -webkit-flex-basis: 16.66666667%;
-        -ms-flex-preferred-size: 16.66666667%;
-        flex-basis: 16.66666667%;
-    }
-    .#{$class}-3 {
-        max-width: 25%;
-        -webkit-flex-basis: 25%;
-        -ms-flex-preferred-size: 25%;
-        flex-basis: 25%;
-    }
-    .#{$class}-4 {
-        max-width: 33.3333333333%;
-        -webkit-flex-basis: 33.3333333333%;
-        -ms-flex-preferred-size: 33.3333333333%;
-        flex-basis: 33.3333333333%;
-    }
-    .#{$class}-5 {
-        max-width: 41.66666667%;
-        -webkit-flex-basis: 41.66666667%;
-        -ms-flex-preferred-size: 41.66666667%;
-        flex-basis: 41.66666667%;
-    }
-    .#{$class}-6 {
-        max-width: 50%;
-        -webkit-flex-basis: 50%;
-        -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-    }
-    .#{$class}-7 {
-        max-width: 58.33333333%;
-        -webkit-flex-basis: 58.33333333%;
-        -ms-flex-preferred-size: 58.33333333%;
-        flex-basis: 58.33333333%;
-    }
-    .#{$class}-8 {
-        max-width: 66.66666667%;
-        -webkit-flex-basis: 66.66666667%;
-        -ms-flex-preferred-size: 66.66666667%;
-        flex-basis: 66.66666667%;
-    }
-    .#{$class}-9 {
-        max-width: 75%;
-        -webkit-flex-basis: 75%;
-        -ms-flex-preferred-size: 75%;
-        flex-basis: 75%;
-    }
-    .#{$class}-10 {
-        max-width: 83.33333333%;
-        -webkit-flex-basis: 83.33333333%;
-        -ms-flex-preferred-size: 83.33333333%;
-        flex-basis: 83.33333333%;
-    }
-    .#{$class}-11 {
-        max-width: 91.66666667%;
-        -webkit-flex-basis: 91.66666667%;
-        -ms-flex-preferred-size: 91.66666667%;
-        flex-basis: 91.66666667%;
-    }
-    .#{$class}-12 {
-        max-width: 100%;
-        -webkit-flex-basis: 100%;
-        -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    }
+@mixin columns($class) {
+	.#{$class}-1 {
+		max-width: 8.33333333%;
+		flex-basis: 8.33333333%;
+	}
+
+	.#{$class}-2 {
+		max-width: 16.66666667%;
+		flex-basis: 16.66666667%;
+	}
+
+	.#{$class}-3 {
+		max-width: 25%;
+		flex-basis: 25%;
+	}
+
+	.#{$class}-4 {
+		max-width: 33.3333333333%;
+		flex-basis: 33.3333333333%;
+	}
+
+	.#{$class}-5 {
+		max-width: 41.66666667%;
+		flex-basis: 41.66666667%;
+	}
+
+	.#{$class}-6 {
+		max-width: 50%;
+		flex-basis: 50%;
+	}
+
+	.#{$class}-7 {
+		max-width: 58.33333333%;
+		flex-basis: 58.33333333%;
+	}
+
+	.#{$class}-8 {
+		max-width: 66.66666667%;
+		flex-basis: 66.66666667%;
+	}
+
+	.#{$class}-9 {
+		max-width: 75%;
+		flex-basis: 75%;
+	}
+
+	.#{$class}-10 {
+		max-width: 83.33333333%;
+		flex-basis: 83.33333333%;
+	}
+
+	.#{$class}-11 {
+		max-width: 91.66666667%;
+		flex-basis: 91.66666667%;
+	}
+
+	.#{$class}-12 {
+		max-width: 100%;
+		flex-basis: 100%;
+	}
 }
+
 /* Columns for Extra-Small screen and down */
 @media #{$extra-small-and-down} {
-     @include columns( 'col-xs');
+	@include columns('col-xs');
 }
+
 /* Columns for Extra-Small screen */
 @media #{$extra-small-and-up} {
-     @include columns( 'col-xs');
+	@include columns('col-xs');
 }
+
 /* Columns for Small screen */
 @media #{$small-and-up} {
-     @include columns( 'col-sm');
+	@include columns('col-sm');
 }
+
 /* Columns for Medium screen */
 @media #{$medium-and-up} {
-     @include columns( 'col-md');
+	@include columns('col-md');
 }
+
 /* Columns for Large screen */
 @media #{$large-and-up} {
-     @include columns( 'col-lg');
+	@include columns('col-lg');
 }
+
 /* Elements have padding and border included in the element's total width and height */
 *,
 *:after,
 *:before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
