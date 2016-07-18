@@ -1,0 +1,28 @@
+/*----------------------------------*\
+  	Variables
+\*----------------------------------*/
+/*
+	Media Query Breakpoints
+*/
+$extra2-small-screen: 320px;
+$extra-small-screen-max: 479px;
+$extra-small-screen: 480px;
+$small-screen-max: 767px;
+$small-screen: 768px;
+$medium-screen-max: 991px;
+$medium-screen: 992px;
+$large-screen-max: 1199px;
+$large-screen: 1200px;
+$extra-large-screen-max: 1439px;
+$extra-large-screen: 1440px;
+$extra2-small-and-down: 'only screen and (max-width : #{$extra-small-screen-max})';
+$extra2-small-and-up: 'only screen and (max-width : #{$extra2-small-screen})';
+$extra-small-and-down: 'only screen and (max-width : #{$small-screen-max})';
+$extra-small-and-up: 'only screen and (min-width : #{$extra-small-screen})';
+$small-and-down: 'only screen and (max-width : #{$medium-screen-max})';
+$small-and-up: 'only screen and (min-width : #{$small-screen})';
+$medium-and-down: 'only screen and (min-width : #{$large-screen-max})';
+$medium-and-up: 'only screen and (min-width : #{$medium-screen})';
+$large-and-down: 'only screen and (min-width : #{$extra-large-screen-max})';
+$large-and-up: 'only screen and (min-width : #{$large-screen})';
+$extra-large-and-up: 'only screen and (min-width : #{$extra-large-screen})';
