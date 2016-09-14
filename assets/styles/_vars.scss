@@ -4,25 +4,73 @@
 /*
 	Media Query Breakpoints
 */
-$extra2-small-screen: 320px;
-$extra-small-screen-max: 479px;
-$extra-small-screen: 480px;
-$small-screen-max: 767px;
-$small-screen: 768px;
-$medium-screen-max: 991px;
-$medium-screen: 992px;
-$large-screen-max: 1199px;
-$large-screen: 1200px;
-$extra-large-screen-max: 1439px;
-$extra-large-screen: 1440px;
-$extra2-small-and-down: 'only screen and (max-width : #{$extra-small-screen-max})';
-$extra2-small-and-up: 'only screen and (max-width : #{$extra2-small-screen})';
-$extra-small-and-down: 'only screen and (max-width : #{$small-screen-max})';
-$extra-small-and-up: 'only screen and (min-width : #{$extra-small-screen})';
-$small-and-down: 'only screen and (max-width : #{$medium-screen-max})';
-$small-and-up: 'only screen and (min-width : #{$small-screen})';
-$medium-and-down: 'only screen and (min-width : #{$large-screen-max})';
-$medium-and-up: 'only screen and (min-width : #{$medium-screen})';
-$large-and-down: 'only screen and (min-width : #{$extra-large-screen-max})';
-$large-and-up: 'only screen and (min-width : #{$large-screen})';
-$extra-large-and-up: 'only screen and (min-width : #{$extra-large-screen})';
+/* Nano */
+$nano-screen-from: 0px;
+$nano-screen-to: 479px;
+
+/* Micro */
+$micro-screen-from: 321px;
+$micro-screen-to: 479px;
+
+/* Extra Small */
+$extra-small-screen-from: 480px;
+$extra-small-screen-to: 767px;
+
+/* Small */
+$small-screen-from: 768px;
+$small-screen-to: 991px;
+
+/* Medium */
+$medium-screen-from: 992px;
+$medium-screen-to: 1199px;
+
+/* Large */
+$large-screen-from: 1200px;
+$large-screen-to: 1439px;
+
+/* Extra Large */
+$extra-large-screen-from: 1440px;
+
+/* Zero query */
+$zero-and-up: 'only screen and (min-width : #{0})';
+
+/* Nano Small Query */
+$nano-and-down: 'only screen and (max-width : #{$nano-screen-to})';
+$nano-and-up: 'only screen and (min-width : #{$nano-screen-from})';
+
+/* Micro Small Query */
+$micro-and-down: 'only screen and (max-width : #{$micro-screen-to})';
+$micro-and-up: 'only screen and (min-width : #{$micro-screen-from})';
+
+/* Extra Small Query */
+$extra-small-and-down: 'only screen and (max-width : #{$extra-small-screen-to})';
+$extra-small-and-up: 'only screen and (min-width : #{$extra-small-screen-from})';
+
+/* Small Query */
+$small-and-down: 'only screen and (max-width : #{$small-screen-to})';
+$small-and-up: 'only screen and (min-width : #{$small-screen-from})';
+
+/* Medium Query */
+$medium-and-down: 'only screen and (max-width : #{$medium-screen-to})';
+$medium-and-up: 'only screen and (min-width : #{$medium-screen-from})';
+
+/* Large Query */
+$large-and-down: 'only screen and (max-width : #{$large-screen-to})';
+$large-and-up: 'only screen and (min-width : #{$large-screen-from})';
+
+/* Extra Large Query */
+$extra-large-and-up: 'only screen and (min-width : #{$extra-large-screen-from})';
+
+/* Number of Columns */
+$grid: 12;
+
+/* Breakpoints column names */
+$breakpoints: (
+	'nano': $nano-and-up,
+	'micro': $micro-and-up,
+	'xs': $extra-small-and-up,
+	'sm': $small-and-up,
+	'md': $medium-and-up,
+	'lg': $large-and-up,
+	'xl': $extra-large-and-up
+);

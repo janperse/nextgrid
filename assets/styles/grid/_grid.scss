@@ -236,92 +236,21 @@
 	}
 }
 
+/* Set column width */
+@mixin col-width($width) {
+	max-width: $width;
+	flex-basis: $width;
+}
+
 /* Create columns from sizes 1-12 */
-@mixin columns($class) {
-	.#{$class}-1 {
-		max-width: 8.33333333%;
-		flex-basis: 8.33333333%;
+@each $class, $point in $breakpoints {
+	@media #{$point}{
+		@for $i from 1 through $grid {
+			.col-#{$class}-#{$i} {
+				@include col-width(100% / $grid * $i);
+			}
+		}
 	}
-
-	.#{$class}-2 {
-		max-width: 16.66666667%;
-		flex-basis: 16.66666667%;
-	}
-
-	.#{$class}-3 {
-		max-width: 25%;
-		flex-basis: 25%;
-	}
-
-	.#{$class}-4 {
-		max-width: 33.3333333333%;
-		flex-basis: 33.3333333333%;
-	}
-
-	.#{$class}-5 {
-		max-width: 41.66666667%;
-		flex-basis: 41.66666667%;
-	}
-
-	.#{$class}-6 {
-		max-width: 50%;
-		flex-basis: 50%;
-	}
-
-	.#{$class}-7 {
-		max-width: 58.33333333%;
-		flex-basis: 58.33333333%;
-	}
-
-	.#{$class}-8 {
-		max-width: 66.66666667%;
-		flex-basis: 66.66666667%;
-	}
-
-	.#{$class}-9 {
-		max-width: 75%;
-		flex-basis: 75%;
-	}
-
-	.#{$class}-10 {
-		max-width: 83.33333333%;
-		flex-basis: 83.33333333%;
-	}
-
-	.#{$class}-11 {
-		max-width: 91.66666667%;
-		flex-basis: 91.66666667%;
-	}
-
-	.#{$class}-12 {
-		max-width: 100%;
-		flex-basis: 100%;
-	}
-}
-
-/* Columns for Extra-Small screen and down */
-@media #{$extra-small-and-down} {
-	@include columns('col-xs');
-}
-
-/* Columns for Extra-Small screen */
-@media #{$extra-small-and-up} {
-	@include columns('col-xs');
-}
-
-/* Columns for Small screen */
-@media #{$small-and-up} {
-	@include columns('col-sm');
-}
-
-/* Columns for Medium screen */
-@media #{$medium-and-up} {
-	@include columns('col-md');
-}
-
-/* Columns for Large screen */
-@media #{$large-and-up} {
-	@include columns('col-lg');
 }
 
 /* Elements have padding and border included in the element's total width and height */
