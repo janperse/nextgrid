@@ -1,0 +1,52 @@
+/*----------------------------------*\
+    Spacings
+\*----------------------------------*/
+/*
+	Margins and paddings
+*/
+/* Margin 0px on all sides */
+.margin0 {
+	margin: 0;
+}
+
+/* Padding 0px on all sides */
+.padding0 {
+	padding: 0;
+}
+
+/* Sizes of spacings - Margin and Padding. Just change the numbers for different spacings, or add new ones */
+$sizes: 0, 5, 10, 15, 20, 25, 30, 40, 50, 60, 70;
+
+/* Prefix classes for spacings */
+$contains: (
+	'pt': padding-top,
+	'pb': padding-bottom,
+	'pr': padding-right,
+	'pl': padding-left,
+	'mt': margin-top,
+	'mb': margin-bottom,
+	'mr': margin-right,
+	'ml': margin-left
+);
+
+/* Spacings class loop */
+@each $prefix, $meaning in $contains {
+	@each $size in $sizes{
+		.#{$prefix}#{$size} {
+			#{$meaning}: $size * 1px;
+		}
+	}
+}
+
+/* Spacings class loop with postfix of breakpoints */
+@each $class, $point in $display-breakpoints {
+	@media #{$point}{
+		@each $prefix, $meaning in $contains {
+			@each $size in $sizes{
+				.#{$prefix}#{$size}-#{$class} {
+					#{$meaning}: $size * 1px;
+				}
+			}
+		}
+	}
+}
