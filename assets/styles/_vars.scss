@@ -4,73 +4,107 @@
 /*
 	Media Query Breakpoints
 */
+/* Screen */
+$screen: "only screen" !default;
+
 /* Nano */
-$nano-screen-from: 0px;
-$nano-screen-to: 479px;
+$nano-screen-from: 0px !default;
+$nano-screen-to: 479px !default;
 
 /* Micro */
-$micro-screen-from: 321px;
-$micro-screen-to: 479px;
+$micro-screen-from: 321px !default;
+$micro-screen-to: 479px !default;
 
 /* Extra Small */
-$extra-small-screen-from: 480px;
-$extra-small-screen-to: 767px;
+$extra-small-screen-from: 480px !default;
+$extra-small-screen-to: 767px !default;
 
 /* Small */
-$small-screen-from: 768px;
-$small-screen-to: 991px;
+$small-screen-from: 768px !default;
+$small-screen-to: 991px !default;
 
 /* Medium */
-$medium-screen-from: 992px;
-$medium-screen-to: 1199px;
+$medium-screen-from: 992px !default;
+$medium-screen-to: 1199px !default;
 
 /* Large */
-$large-screen-from: 1200px;
-$large-screen-to: 1439px;
+$large-screen-from: 1200px !default;
+$large-screen-to: 1439px !default;
 
 /* Extra Large */
-$extra-large-screen-from: 1440px;
+$extra-large-screen-from: 1440px !default;
 
-/* Zero query */
-$zero-and-up: 'only screen and (min-width : #{0})';
-
+/*
+	Media Queries
+*/
 /* Nano Small Query */
-$nano-and-down: 'only screen and (max-width : #{$nano-screen-to})';
-$nano-and-up: 'only screen and (min-width : #{$nano-screen-from})';
+$nano-and-down: "#{$screen} and (max-width : #{$nano-screen-to})" !default;
+$nano-and-up: "#{$screen} and (min-width : #{$nano-screen-from})" !default;
+$nano-only: "#{$screen} and (min-width: #{$nano-screen-from}) and (max-width: #{$nano-screen-to})" !default;
 
 /* Micro Small Query */
-$micro-and-down: 'only screen and (max-width : #{$micro-screen-to})';
-$micro-and-up: 'only screen and (min-width : #{$micro-screen-from})';
+$micro-and-down: "#{$screen} and (max-width : #{$micro-screen-to})" !default;
+$micro-and-up: "#{$screen} and (min-width : #{$micro-screen-from})" !default;
+$micro-only: "#{$screen} and (min-width: #{$micro-screen-from}) and (max-width: #{$micro-screen-to})" !default;
 
 /* Extra Small Query */
-$extra-small-and-down: 'only screen and (max-width : #{$extra-small-screen-to})';
-$extra-small-and-up: 'only screen and (min-width : #{$extra-small-screen-from})';
+$extra-small-and-down: "#{$screen} and (max-width : #{$extra-small-screen-to})" !default;
+$extra-small-and-up: "#{$screen} and (min-width : #{$extra-small-screen-from})" !default;
+$extra-small-only: "#{$screen} and (min-width: #{$extra-small-screen-from}) and (max-width: #{$extra-small-screen-to})" !default;
 
 /* Small Query */
-$small-and-down: 'only screen and (max-width : #{$small-screen-to})';
-$small-and-up: 'only screen and (min-width : #{$small-screen-from})';
+$small-and-down: "#{$screen} and (max-width : #{$small-screen-to})" !default;
+$small-and-up: "#{$screen} and (min-width : #{$small-screen-from})" !default;
+$small-only: "#{$screen} and (min-width: #{$small-screen-from}) and (max-width: #{$small-screen-to})" !default;
 
 /* Medium Query */
-$medium-and-down: 'only screen and (max-width : #{$medium-screen-to})';
-$medium-and-up: 'only screen and (min-width : #{$medium-screen-from})';
+$medium-and-down: "#{$screen} and (max-width : #{$medium-screen-to})" !default;
+$medium-and-up: "#{$screen} and (min-width : #{$medium-screen-from})" !default;
+$medium-only: "#{$screen} and (min-width: #{$medium-screen-from}) and (max-width: #{$medium-screen-to})" !default;
 
 /* Large Query */
-$large-and-down: 'only screen and (max-width : #{$large-screen-to})';
-$large-and-up: 'only screen and (min-width : #{$large-screen-from})';
+$large-and-down: "#{$screen} and (max-width : #{$large-screen-to})" !default;
+$large-and-up: "#{$screen} and (min-width : #{$large-screen-from})" !default;
+$large-only: "#{$screen} and (min-width: #{$large-screen-from}) and (max-width: #{$large-screen-to})" !default;
 
 /* Extra Large Query */
-$extra-large-and-up: 'only screen and (min-width : #{$extra-large-screen-from})';
+$extra-large-and-up: "#{$screen} and (min-width : #{$extra-large-screen-from})" !default;
 
+/*
+	Media Query Properties
+*/
 /* Number of Columns */
-$grid: 12;
+$grid: 12 !default;
 
 /* Breakpoints column names */
 $breakpoints: (
-	'nano': $nano-and-up,
-	'micro': $micro-and-up,
-	'xs': $extra-small-and-up,
-	'sm': $small-and-up,
-	'md': $medium-and-up,
-	'lg': $large-and-up,
-	'xl': $extra-large-and-up
+	"nano": $nano-and-up,
+	"micro": $micro-and-up,
+	"xs": $extra-small-and-up,
+	"sm": $small-and-up,
+	"md": $medium-and-up,
+	"lg": $large-and-up,
+	"xl": $extra-large-and-up
+);
+
+/*
+	Grid Helpers
+*/
+/* Display Breakpoints */
+$display-breakpoints: (
+	"nano": $nano-only,
+	"micro": $micro-only,
+	"xs": $extra-small-only,
+	"sm": $small-only,
+	"md": $medium-only,
+	"lg": $large-only,
+	"xl": $extra-large-and-up
+);
+
+/* Display properties */
+$display-properties: (
+	flex,
+	block,
+	inline,
+	inline-block
 );
