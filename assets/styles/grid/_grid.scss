@@ -269,6 +269,21 @@
 	}
 }
 
+/*
+	Element Hidden
+*/
+/* Add "display: none;" to the appropriate breakpoint. Use it as "hidden-xs" */
+@each $class, $point in $display-breakpoints {
+	@media #{$point}{
+		.hidden-#{$class} {
+			display: none !important;
+		}
+	}
+}
+
+/*
+	Basic Grid Stuff
+*/
 /* Elements have padding and border included in the element's total width and height */
 *,
 *:after,
