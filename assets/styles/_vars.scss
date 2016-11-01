@@ -76,7 +76,7 @@ $extra-large-and-up: "#{$screen} and (min-width : #{$extra-large-screen-from})" 
 /* Number of Columns */
 $grid: 12 !default;
 
-/* Breakpoints column names */
+/* Breakpoints query breakpoint and up */
 $breakpoints: (
 	"nano": $nano-and-up,
 	"micro": $micro-and-up,
@@ -87,18 +87,25 @@ $breakpoints: (
 	"xl": $extra-large-and-up
 );
 
-/*
-	Grid Helpers
-*/
-/* Display Breakpoints */
-$display-breakpoints: (
-	"nano": $nano-only,
-	"micro": $micro-only,
-	"xs": $extra-small-only,
-	"sm": $small-only,
-	"md": $medium-only,
-	"lg": $large-only,
-	"xl": $extra-large-and-up
+/* Breakpoints query breakpoint and down */
+$breakpoints-down: (
+	"nano-down": $nano-and-down,
+	"micro-down": $micro-and-down,
+	"xs-down": $extra-small-and-down,
+	"sm-down": $small-and-down,
+	"md-down": $medium-and-down,
+	"lg-down": $large-and-down
+);
+
+/* Breakpoints query breakpoint only */
+$breakpoints-only: (
+	"nano-only": $nano-only,
+	"micro-only": $micro-only,
+	"xs-only": $extra-small-only,
+	"sm-only": $small-only,
+	"md-only": $medium-only,
+	"lg-only": $large-only,
+	"xl-only": $extra-large-and-up
 );
 
 /* Display properties */

@@ -15,10 +15,10 @@
 }
 
 /* Sizes of spacings - Margin and Padding. Just change the numbers for different spacings, or add new ones */
-$sizes: 0, 5, 10, 15, 20, 25, 30, 40, 50, 60, 70;
+$spacing-sizes: 0, 5, 10, 15, 20, 25, 30, 40, 50, 60, 70;
 
 /* Prefix classes for spacings */
-$contains: (
+$spacing-classes: (
 	'pt': padding-top,
 	'pb': padding-bottom,
 	'pr': padding-right,
@@ -30,8 +30,8 @@ $contains: (
 );
 
 /* Spacings class loop */
-@each $prefix, $meaning in $contains {
-	@each $size in $sizes{
+@each $prefix, $meaning in $spacing-classes {
+	@each $size in $spacing-sizes{
 		.#{$prefix}#{$size} {
 			#{$meaning}: $size * 1px;
 		}
@@ -39,10 +39,23 @@ $contains: (
 }
 
 /* Spacings class loop with postfix of breakpoints */
-@each $class, $point in $display-breakpoints {
+@each $class, $point in $breakpoints {
 	@media #{$point}{
-		@each $prefix, $meaning in $contains {
-			@each $size in $sizes{
+		@each $prefix, $meaning in $spacing-classes {
+			@each $size in $spacing-sizes {
+				.#{$prefix}#{$size}-#{$class} {
+					#{$meaning}: $size * 1px;
+				}
+			}
+		}
+	}
+}
+
+/* Spacings class loop with postfix of breakpoints for breakpoint and down */
+@each $class, $point in $breakpoints-down {
+	@media #{$point}{
+		@each $prefix, $meaning in $spacing-classes {
+			@each $size in $spacing-sizes {
 				.#{$prefix}#{$size}-#{$class} {
 					#{$meaning}: $size * 1px;
 				}
