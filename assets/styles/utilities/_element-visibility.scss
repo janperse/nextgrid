@@ -5,11 +5,9 @@
 	Element Visible
 */
 /* "display: none;" for all visible classes */
-@each $class, $point in $breakpoints-only {
-	[class*=" visible-#{$class}"],
-	[class^="visible-#{$class}"] {
-		display: none !important;
-	}
+[class*=" visible-"],
+[class^="visible-"] {
+	display: none !important;
 }
 
 /* Override none property with appropriate one (flex, block, inline, inline-block). Use it as "visible-xs-flex" */
