@@ -1,21 +1,21 @@
 {
-	"name": "flexgrid",
+	"name": "nextgrid",
 	"version": "1.0.0",
-	"description": "FlexGrid",
+	"description": "NextGrid made with Flex",
 	"main": "gulpfile.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/janperse/flexgrid.git"
+		"url": "git+https://github.com/janperse/nextgrid.git"
 	},
 	"author": "Jan Perse",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/janperse/flexgrid/issues"
+		"url": "https://github.com/janperse/nextgrid/issues"
 	},
-	"homepage": "https://github.com/janperse/flexgrid#readme",
+	"homepage": "https://github.com/janperse/nextgrid#readme",
 	"devDependencies": {
 		"browser-sync": "^2.13.0",
 		"del": "^2.2.1",

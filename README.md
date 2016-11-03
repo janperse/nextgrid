@@ -1,4 +1,4 @@
-#FLEX GRID
+#NextGrid
 *From | March 2016*
 
 ### What is this repository for? ###
