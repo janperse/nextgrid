@@ -1,0 +1,15 @@
+.element-block {
+	width: 100%;
+	max-width: 100%;
+	flex-basis: 100%;
+}
+
+@each $class, $point in $breakpoints-down {
+	@media #{$point}{
+		.element-block-#{$class} {
+			width: 100%;
+			max-width: 100%;
+			flex-basis: 100%;
+		}
+	}
+}

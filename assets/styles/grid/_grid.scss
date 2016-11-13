@@ -34,12 +34,6 @@
 	@media #{$extra-large-and-up} {
 		width: 1440px;
 	}
-
-	/* Different gutter for small screens */
-	@media #{$extra-small-and-down} {
-		padding-right: 8px;
-		padding-left: 8px;
-	}
 }
 
 /* Fluid container aka full width */
@@ -48,22 +42,12 @@
 	margin-left: auto;
 	padding-right: 12px;
 	padding-left: 12px;
-
-	/* Different gutter for small screens */
-	@media #{$small-and-down} {
-		padding-right: 8px;
-		padding-left: 8px;
-	}
 }
 
 /* Row is wraper of columns, it removes extra padding of columns left and right to fit container width */
 .row {
 	margin-right: -12px;
 	margin-left: -12px;
-	@media #{$small-and-down} {
-		margin-right: -8px;
-		margin-left: -8px;
-	}
 }
 
 /* Main flex class, without this, flex positioning is not working. Use "row" when using columns, if not, use "flex" */
@@ -225,8 +209,8 @@
 /* Add padding left and right to all columns. Width: 100% added to fill the container if any column size is not defined */
 [class*=" col-"],
 [class^="col-"] {
-	padding-right: 15px;
-	padding-left: 15px;
+	padding-right: 12px;
+	padding-left: 12px;
 	width: 100%;
 }
 
