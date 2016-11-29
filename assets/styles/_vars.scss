@@ -78,13 +78,13 @@ $grid: 12 !default;
 
 /* Breakpoints query breakpoint and up */
 $breakpoints: (
-	"xl": $extra-large-and-up,
-	"lg": $large-and-up,
-	"md": $medium-and-up,
-	"sm": $small-and-up,
-	"xs": $extra-small-and-up,
+	"nano": $nano-and-up,
 	"micro": $micro-and-up,
-	"nano": $nano-and-up
+	"xs": $extra-small-and-up,
+	"sm": $small-and-up,
+	"md": $medium-and-up,
+	"lg": $large-and-up,
+	"xl": $extra-large-and-up
 );
 
 /* Breakpoints query breakpoint and down */
