@@ -78,34 +78,34 @@ $grid: 12 !default;
 
 /* Breakpoints query breakpoint and up */
 $breakpoints: (
-	"nano": $nano-and-up,
-	"micro": $micro-and-up,
-	"xs": $extra-small-and-up,
-	"sm": $small-and-up,
-	"md": $medium-and-up,
+	"xl": $extra-large-and-up,
 	"lg": $large-and-up,
-	"xl": $extra-large-and-up
+	"md": $medium-and-up,
+	"sm": $small-and-up,
+	"xs": $extra-small-and-up,
+	"micro": $micro-and-up,
+	"nano": $nano-and-up
 );
 
 /* Breakpoints query breakpoint and down */
 $breakpoints-down: (
-	"nano-down": $nano-and-down,
-	"micro-down": $micro-and-down,
-	"xs-down": $extra-small-and-down,
-	"sm-down": $small-and-down,
+	"lg-down": $large-and-down,
 	"md-down": $medium-and-down,
-	"lg-down": $large-and-down
+	"sm-down": $small-and-down,
+	"xs-down": $extra-small-and-down,
+	"micro-down": $micro-and-down,
+	"nano-down": $nano-and-down
 );
 
 /* Breakpoints query breakpoint only */
 $breakpoints-only: (
-	"nano-only": $nano-only,
-	"micro-only": $micro-only,
-	"xs-only": $extra-small-only,
-	"sm-only": $small-only,
-	"md-only": $medium-only,
+	"xl-only": $extra-large-and-up,
 	"lg-only": $large-only,
-	"xl-only": $extra-large-and-up
+	"md-only": $medium-only,
+	"sm-only": $small-only,
+	"xs-only": $extra-small-only,
+	"micro-only": $micro-only,
+	"nano-only": $nano-only
 );
 
 /* Display properties */
