@@ -8,8 +8,8 @@
 .container {
 	margin-right: auto;
 	margin-left: auto;
-	padding-right: 12px;
-	padding-left: 12px;
+	padding-right: $gutter;
+	padding-left: $gutter;
 
 	/*
 		Responsive media query
@@ -40,14 +40,14 @@
 .container-fluid {
 	margin-right: auto;
 	margin-left: auto;
-	padding-right: 12px;
-	padding-left: 12px;
+	padding-right: $gutter;
+	padding-left: $gutter;
 }
 
 /* Row is wraper of columns, it removes extra padding of columns left and right to fit container width */
 .row {
-	margin-right: -12px;
-	margin-left: -12px;
+	margin-right: -$gutter;
+	margin-left: -$gutter;
 }
 
 /* Main flex class, without this, flex positioning is not working. Use "row" when using columns, if not, use "flex" */
@@ -201,6 +201,13 @@
 	&__item-stretch {
 		align-self: stretch;
 	}
+	
+	/*
+	  Properties for children - fill gap
+	*/
+	&__fill-gap {
+		flex: 1;
+	}
 }
 
 /*
@@ -209,8 +216,8 @@
 /* Add padding left and right to all columns. Width: 100% added to fill the container if any column size is not defined */
 [class*=" col-"],
 [class^="col-"] {
-	padding-right: 12px;
-	padding-left: 12px;
+	padding-right: $gutter;
+	padding-left: $gutter;
 	width: 100%;
 }
 
