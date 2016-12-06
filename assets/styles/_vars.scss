@@ -120,3 +120,9 @@ $display-properties: (
 	inline,
 	inline-block
 );
+
+/*
+	Spacings
+*/
+/* Sizes of spacings - Margin and Padding. Just change the numbers for different spacings, or add new ones */
+$spacing-sizes: 0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 72, 84, 96, 108, 120, 180, 240;
