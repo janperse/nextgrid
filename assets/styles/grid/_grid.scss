@@ -6,11 +6,6 @@
 */
 /* Container main css and it's width */
 .container {
-	margin-right: auto;
-	margin-left: auto;
-	padding-right: $gutter;
-	padding-left: $gutter;
-
 	/*
 		Responsive media query
 		On Extra-Small screens and down, container is full width
@@ -36,12 +31,12 @@
 	}
 }
 
-/* Fluid container aka full width */
-.container-fluid {
+/* Container */
+.container, .container-fluid {
 	margin-right: auto;
 	margin-left: auto;
-	padding-right: $gutter;
-	padding-left: $gutter;
+	padding-right: $gutter-container;
+	padding-left: $gutter-container;
 }
 
 /* Row is wraper of columns, it removes extra padding of columns left and right to fit container width */
