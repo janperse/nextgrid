@@ -4,7 +4,7 @@
 /* Create offsets from sizes 1-12 */
 @each $class, $point in $breakpoints {
 	@media #{$point}{
-		@for $i from 1 through $grid {
+		@for $i from 0 through $grid {
 			.col-#{$class}-offset-#{$i} {
 				margin-left: 100% / $grid * $i;
 			}

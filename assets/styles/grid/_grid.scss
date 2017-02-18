@@ -37,6 +37,11 @@
 	margin-left: auto;
 	padding-right: $gutter-container;
 	padding-left: $gutter-container;
+	
+	@media #{$small-and-down} {
+		padding-right: $gutter-container-mobile;
+		padding-left: $gutter-container-mobile;
+	}
 }
 
 /* Row is wraper of columns, it removes extra padding of columns left and right to fit container width */
