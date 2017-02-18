@@ -6,6 +6,8 @@
 */
 /* Container main css and it's width */
 .container {
+	max-width: $container-max-width;
+	
 	/*
 		Responsive media query
 		On Extra-Small screens and down, container is full width
