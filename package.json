@@ -1,6 +1,6 @@
 {
   "name": "nextgrid",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "NextGrid made with Flex",
   "main": "gulpfile.js",
   "scripts": {
