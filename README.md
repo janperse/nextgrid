@@ -1,5 +1,4 @@
 #NextGrid
-
 ### Installation ###
 
 	$ npm install nextgrid --save
