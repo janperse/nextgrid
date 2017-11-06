@@ -1,8 +1,8 @@
 /*----------------------------------*\
-    Flex Positions
+    Column Offsets
 \*----------------------------------*/
 /* Create offsets from sizes 1-12 */
-@each $class, $point in $breakpoints {
+@each $class, $point in $breakpoints-up {
 	@media #{$point}{
 		@for $i from 0 through $grid {
 			.col-#{$class}-offset-#{$i} {
