@@ -6,210 +6,195 @@
 */
 /* Container main css and it's width */
 .container {
-	max-width: $container-max-width;
-	
-	/*
-		Responsive media query
-		On Extra-Small screens and down, container is full width
-	*/
-	/* Width 768px on small devices (768px and more) */
-	@media #{$small-and-up} {
-		width: 768px;
-	}
-
-	/* Width 936px on medium devices (960px and more) */
-	@media #{$medium-and-up} {
-		width: 960px;
-	}
-
-	/* Width 1140px on large devices (1160px and more) */
-	@media #{$large-and-up} {
-		width: 1140px;
-	}
-
-	/* Width 1440px on large devices (1440px and more) */
-	@media #{$extra-large-and-up} {
-		width: 1440px;
-	}
+  max-width: $container-max-width;
+  
+  /*
+    Responsive media query
+    On Extra-Small screens and down, container is full width
+  */
+  /* Width 768px on small devices (768px and more) */
+  @media #{$small-and-up} {
+    width: 768px;
+  }
+  
+  /* Width 936px on medium devices (960px and more) */
+  @media #{$medium-and-up} {
+    width: 960px;
+  }
+  
+  /* Width 1140px on large devices (1160px and more) */
+  @media #{$large-and-up} {
+    width: 1140px;
+  }
+  
+  /* Width 1440px on large devices (1440px and more) */
+  @media #{$extra-large-and-up} {
+    width: 1440px;
+  }
 }
 
 /* Container */
 .container, .container-fluid {
-	margin-right: auto;
-	margin-left: auto;
-	padding-right: $gutter-container;
-	padding-left: $gutter-container;
-	
-	@media #{$small-and-down} {
-		padding-right: $gutter-container-mobile;
-		padding-left: $gutter-container-mobile;
-	}
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $gutter-container;
+  padding-left: $gutter-container;
+  
+  @media #{$small-and-down} {
+    padding-right: $gutter-container-mobile;
+    padding-left: $gutter-container-mobile;
+  }
 }
 
 /* Row is wraper of columns, it removes extra padding of columns left and right to fit container width */
 .row {
-	margin-right: -$gutter;
-	margin-left: -$gutter;
+  margin-right: -$gutter;
+  margin-left: -$gutter;
 }
 
 /* Main flex class, without this, flex positioning is not working. Use "row" when using columns, if not, use "flex" */
 .flex,
 .row {
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /*
 	Flex alignment
 */
+$flex-directions: ('row', 'row-reverse', 'column', 'column-reverse');
+$flex-justify-contents: (
+  'start': 'flex-start',
+  'end': 'flex-end',
+  'center': 'center',
+  'between': 'space-between',
+  'around': 'space-around'
+);
+$flex-align-items: (
+  'start': 'flex-start',
+  'end': 'flex-end',
+  'center': 'center',
+  'stretch': 'stretch',
+  'baseline': 'baseline'
+);
+$flex-align-contents: (
+  'start': 'flex-start',
+  'end': 'flex-end',
+  'center': 'center',
+  'stretch': 'stretch',
+  'between': 'space-between',
+  'around': 'space-around'
+);
+$flex-align-selfs: (
+  'start': 'flex-start',
+  'end': 'flex-end',
+  'center': 'center',
+  'stretch': 'stretch',
+  'baseline': 'baseline'
+);
+
 .flex {
-	/*
-	  Properties for parents - containers
-		Direction of displayed flex items
-	*/
-	/* Direction of items left to right */
-	&--row {
-		flex-direction: row;
-	}
-
-	/* Direction of items right to left */
-	&--row-reverse {
-		flex-direction: row-reverse;
-	}
-
-	/* Direction of items top to bottom */
-	&--column {
-		flex-direction: column;
-	}
-
-	/* Direction of items bottom to top */
-	&--column-reverse {
-		flex-direction: column-reverse;
-	}
-
-	/*
-	  Content alignment on main axis - X axis
-	*/
-	/* Justify content left */
-	&--justify-left {
-		justify-content: flex-start;
-	}
-
-	/* Justify content right */
-	&--justify-right {
-		justify-content: flex-end;
-	}
-
-	/* Justify content in center */
-	&--justify-center {
-		justify-content: center;
-	}
-
-	/* Justify content with space between it */
-	&--justify-space-between {
-		justify-content: space-between;
-	}
-
-	/* Justify content with space around it */
-	&--justify-space-around {
-		justify-content: space-around;
-	}
-
-	/*
-	  Content alignment on cross axis - Y axis
-	*/
-	/* Align items on top */
-	&--align-top {
-		align-items: flex-start;
-	}
-
-	/* Align items on bottom */
-	&--align-bottom {
-		align-items: flex-end;
-	}
-
-	/* Align items vertically in center */
-	&--align-vertical {
-		align-items: center;
-	}
-
-	/* Stretch items to fill container */
-	&--align-stretch {
-		align-items: stretch;
-	}
-
-	/* Align items such as their baselines align */
-	&--align-baseline {
-		align-items: baseline;
-	}
-
-	/*
-	  Content alignment on cross axis - Y axis, but only when there are multiple lines and extra space in container - Y axis
-	*/
-	/* Align content left */
-	&--left {
-		align-content: flex-start;
-	}
-
-	/* Align content right */
-	&--right {
-		align-content: flex-end;
-	}
-
-	/* Align content in center */
-	&--center {
-		align-content: center;
-	}
-
-	/* Stretch content to fill container */
-	&--stretch {
-		align-content: stretch;
-	}
-
-	/* Align content with space between */
-	&--space-between {
-		align-content: space-between;
-	}
-
-	/* Align content with space around */
-	&--space-around {
-		align-content: space-around;
-	}
-
-	/*
-	  Properties for children - flex items
-	*/
-	/* Align flex item on top */
-	&__item-top {
-		align-self: flex-start;
-	}
-
-	/* Align flex item on bottom */
-	&__item-bottom {
-		align-self: flex-end;
-	}
-
-	/* Align flex item in center */
-	&__item-center {
-		align-self: center;
-	}
-
-	/* Align flex item on baseline */
-	&__item-baseline {
-		align-self: baseline;
-	}
-
-	/* Stretch flex item to fill container */
-	&__item-stretch {
-		align-self: stretch;
-	}
-	
-	/*
-	  Properties for children - fill gap
-	*/
-	&__fill-gap {
-		flex: 1;
-	}
+  /*
+    Properties for parents - containers
+    Direction of displayed flex items
+  */
+  @each $direction in $flex-directions {
+    &--#{$direction} {
+      flex-direction: $direction;
+    }
+  }
+  
+  @each $class, $point in $breakpoints-up {
+    @media #{$point} {
+      @each $direction in $flex-directions {
+        &--#{$direction}-#{$class} {
+          flex-direction: $direction;
+        }
+      }
+    }
+  }
+  
+  /*
+    Content alignment on main axis - X axis
+  */
+  @each $prefix, $meaning in $flex-justify-contents {
+    &--justify-#{$prefix} {
+      justify-content: $meaning;
+    }
+  }
+  
+  @each $class, $point in $breakpoints-up {
+    @media #{$point} {
+      @each $prefix, $meaning in $flex-justify-contents {
+        &--justify-#{$prefix}-#{$class} {
+          justify-content: $meaning;
+        }
+      }
+    }
+  }
+  
+  /*
+    Content alignment on cross axis - Y axis
+  */
+  @each $prefix, $meaning in $flex-align-items {
+    &--align-#{$prefix} {
+      align-items: $meaning;
+    }
+  }
+  
+  @each $class, $point in $breakpoints-up {
+    @media #{$point} {
+      @each $prefix, $meaning in $flex-align-items {
+        &--align-#{$prefix}-#{$class} {
+          align-items: $meaning;
+        }
+      }
+    }
+  }
+  
+  /*
+    Content alignment on cross axis - Y axis, but only when there are multiple lines and extra space in container - Y axis
+  */
+  @each $prefix, $meaning in $flex-align-contents {
+    &--#{$prefix} {
+      align-content: $meaning;
+    }
+  }
+  
+  @each $class, $point in $breakpoints-up {
+    @media #{$point} {
+      @each $prefix, $meaning in $flex-align-contents {
+        &--#{$prefix}-#{$class} {
+          align-content: $meaning;
+        }
+      }
+    }
+  }
+  
+  /*
+    Properties for children - flex items
+  */
+  /* Align Self */
+  @each $prefix, $meaning in $flex-align-selfs {
+    &__item-#{$prefix} {
+      align-self: $meaning;
+    }
+  }
+  
+  @each $class, $point in $breakpoints-up {
+    @media #{$point} {
+      @each $prefix, $meaning in $flex-align-selfs {
+        &__item-#{$prefix}-#{$class} {
+          align-self: $meaning;
+        }
+      }
+    }
+  }
+  
+  /* Fill Gap */
+  &__fill-gap {
+    flex: 1;
+  }
 }
 
 /*
@@ -218,26 +203,26 @@
 /* Add padding left and right to all columns. Width: 100% added to fill the container if any column size is not defined */
 [class*=" col-"],
 [class^="col-"] {
-	padding-right: $gutter;
-	padding-left: $gutter;
-	width: 100%;
+  padding-right: $gutter;
+  padding-left: $gutter;
+  width: 100%;
 }
 
 /* Set column width */
 @mixin col-width($width) {
-	max-width: $width;
-	flex-basis: $width;
+  max-width: $width;
+  flex-basis: $width;
 }
 
 /* Create columns from sizes 1-12 */
-@each $class, $point in $breakpoints {
-	@media #{$point}{
-		@for $i from 1 through $grid {
-			.col-#{$class}-#{$i} {
-				@include col-width(100% / $grid * $i);
-			}
-		}
-	}
+@each $class, $point in $breakpoints-up {
+  @media #{$point}{
+    @for $i from 1 through $grid {
+      .col-#{$class}-#{$i} {
+        @include col-width(100% / $grid * $i);
+      }
+    }
+  }
 }
 
 /*
@@ -247,5 +232,5 @@
 *,
 *:after,
 *:before {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
