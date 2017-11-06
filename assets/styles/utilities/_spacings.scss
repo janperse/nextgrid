@@ -4,16 +4,6 @@
 /*
 	Margins and paddings
 */
-/* Margin 0px on all sides */
-.margin0 {
-	margin: 0;
-}
-
-/* Padding 0px on all sides */
-.padding0 {
-	padding: 0;
-}
-
 /* Prefix classes for spacings */
 $spacing-classes: (
 	'p': padding,
@@ -38,7 +28,7 @@ $spacing-classes: (
 }
 
 /* Spacings class loop with postfix of breakpoints */
-@each $class, $point in $breakpoints {
+@each $class, $point in $breakpoints-up {
 	@media #{$point}{
 		@each $prefix, $meaning in $spacing-classes {
 			@each $size in $spacing-sizes {
