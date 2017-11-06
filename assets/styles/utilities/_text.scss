@@ -1,0 +1,72 @@
+/*----------------------------------*\
+    Text
+\*----------------------------------*/
+/*
+	Align
+*/
+$text-alignments: ('center', 'left', 'right');
+
+@each $class, $point in $breakpoints-down {
+  @media #{$point}{
+    @each $align in $text-alignments {
+      .text-#{$align}-#{$class} {
+        text-align: $align;
+      }
+    }
+  }
+}
+
+/*
+	Decoration
+*/
+.text-decoration-none {
+  text-decoration: none;
+}
+
+/*
+	Transform
+*/
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+/*
+	Variant
+*/
+.text-small-caps {
+  font-variant: small-caps;
+}
+
+/*
+  Style
+*/
+.text-italic {
+  font-style: italic;
+}
+
+/*
+	Font Weights
+ */
+/* Variables */
+$font-weights: (
+  'thin': 100,
+  'light': 200,
+  'book': 300,
+  'normal': 400,
+  'medium': 500,
+  'semi-bold': 600,
+  'bold': 700,
+  'extra-bold': 800,
+  'black': 900
+);
+
+/* Classes */
+@each $prefix, $meaning in $font-weights {
+  .text-#{$prefix} {
+    font-weight: $meaning;
+  }
+}
