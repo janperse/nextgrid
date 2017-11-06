@@ -1,0 +1,10 @@
+/*----------------------------------*\
+    Element Display
+\*----------------------------------*/
+$element-displays: ('block', 'inline-block', 'inline');
+
+@each $display in $element-displays {
+  .text-#{$display} {
+    display: $display;
+  }
+}

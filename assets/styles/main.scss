@@ -1,25 +1,29 @@
 /*----------------------------------*\
     NextGrid Styles
 \*----------------------------------*/
+
 /*
  TABLE OF CONTENTS
     01. Variables....................Imported via gulp and can be found in _vars.scss
     02. Grid......................The general styles like align-center etc.
 */
-/*
-	Variables
-*/
-@import "vars";
-/*
-	Utilities
-*/
-@import "utilities/spacings";
-@import "utilities/col-offsets";
-@import "utilities/element-visibility";
-@import "utilities/flex-positions";
-@import "utilities/element-block";
 
 /*
-	Grid
+    Variables
+*/
+@import "vars";
+
+/*
+    Utilities
+*/
+@import "utilities/col-offsets";
+@import "utilities/element-display";
+@import "utilities/element-size";
+@import "utilities/element-visibility";
+@import "utilities/flex-positions";
+@import "utilities/spacings";
+
+/*
+    Grid
 */
 @import "grid/grid";
