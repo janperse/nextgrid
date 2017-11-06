@@ -91,7 +91,7 @@ $extra-large-and-up: "#{$screen} and (min-width : #{$extra-large-screen-from})" 
 $grid: 12 !default;
 
 /* Breakpoints query breakpoint and up */
-$breakpoints: (
+$breakpoints-up: (
 	"nano": $nano-and-up,
 	"micro": $micro-and-up,
 	"xs": $extra-small-and-up,
