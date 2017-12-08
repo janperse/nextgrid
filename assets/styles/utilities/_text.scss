@@ -6,6 +6,12 @@
 */
 $text-alignments: ('center', 'left', 'right');
 
+@each $align in $text-alignments {
+  .text-#{$align} {
+    text-align: $align;
+  }
+}
+
 @each $class, $point in $breakpoints-down {
   @media #{$point}{
     @each $align in $text-alignments {

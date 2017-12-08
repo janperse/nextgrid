@@ -34,6 +34,10 @@
 /*
 	Element Hidden
 */
+.hidden {
+  display: none !important;
+}
+
 /* Add "display: none;" to the appropriate breakpoint. Use it as "hidden-xs" */
 @each $class, $point in $breakpoints-only {
 	@media #{$point}{
