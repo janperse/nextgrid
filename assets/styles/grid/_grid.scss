@@ -62,35 +62,35 @@
 /*
 	Flex alignment
 */
-$flex-directions: ('row', 'row-reverse', 'column', 'column-reverse');
+$flex-directions: (row, row-reverse, column, column-reverse);
 $flex-justify-contents: (
-  'start': 'flex-start',
-  'end': 'flex-end',
-  'center': 'center',
-  'between': 'space-between',
-  'around': 'space-around'
+  'start': flex-start,
+  'end': flex-end,
+  'center': center,
+  'between': space-between,
+  'around': space-around
 );
 $flex-align-items: (
-  'start': 'flex-start',
-  'end': 'flex-end',
-  'center': 'center',
-  'stretch': 'stretch',
-  'baseline': 'baseline'
+  'start': flex-start,
+  'end': flex-end,
+  'center': center,
+  'stretch': stretch,
+  'baseline': baseline
 );
 $flex-align-contents: (
-  'start': 'flex-start',
-  'end': 'flex-end',
-  'center': 'center',
-  'stretch': 'stretch',
-  'between': 'space-between',
-  'around': 'space-around'
+  'start': flex-start,
+  'end': flex-end,
+  'center': center,
+  'stretch': stretch,
+  'between': space-between,
+  'around': space-around
 );
 $flex-align-selfs: (
-  'start': 'flex-start',
-  'end': 'flex-end',
-  'center': 'center',
-  'stretch': 'stretch',
-  'baseline': 'baseline'
+  'start': flex-start,
+  'end': flex-end,
+  'center': center,
+  'stretch': stretch,
+  'baseline': baseline
 );
 
 .flex {

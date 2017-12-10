@@ -1,9 +1,7 @@
 /*----------------------------------*\
     Element Display
 \*----------------------------------*/
-$element-displays: ('flex', 'block', 'inline-block', 'inline');
-
-@each $display in $element-displays {
+@each $display in $display-properties {
   .element-#{$display} {
     display: $display;
   }
