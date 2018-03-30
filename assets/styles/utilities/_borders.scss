@@ -20,7 +20,7 @@
 }
 
 /* Borders size class loop - Responsive */
-@if $opacity-with-breakpoints {
+@if $borders-with-breakpoints {
 
   /* Borders size loop with postfix of breakpoints */
   @each $class, $point in $breakpoints-up {

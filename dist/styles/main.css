@@ -5811,51 +5811,51 @@
   text-align: right; }
 
 @media only screen and (max-width: 1439px) {
-  .text-center-lg-down {
+  .text-center--lg-down {
     text-align: center; }
-  .text-left-lg-down {
+  .text-left--lg-down {
     text-align: left; }
-  .text-right-lg-down {
+  .text-right--lg-down {
     text-align: right; } }
 
 @media only screen and (max-width: 1199px) {
-  .text-center-md-down {
+  .text-center--md-down {
     text-align: center; }
-  .text-left-md-down {
+  .text-left--md-down {
     text-align: left; }
-  .text-right-md-down {
+  .text-right--md-down {
     text-align: right; } }
 
 @media only screen and (max-width: 991px) {
-  .text-center-sm-down {
+  .text-center--sm-down {
     text-align: center; }
-  .text-left-sm-down {
+  .text-left--sm-down {
     text-align: left; }
-  .text-right-sm-down {
+  .text-right--sm-down {
     text-align: right; } }
 
 @media only screen and (max-width: 767px) {
-  .text-center-xs-down {
+  .text-center--xs-down {
     text-align: center; }
-  .text-left-xs-down {
+  .text-left--xs-down {
     text-align: left; }
-  .text-right-xs-down {
+  .text-right--xs-down {
     text-align: right; } }
 
 @media only screen and (max-width: 479px) {
-  .text-center-micro-down {
+  .text-center--micro-down {
     text-align: center; }
-  .text-left-micro-down {
+  .text-left--micro-down {
     text-align: left; }
-  .text-right-micro-down {
+  .text-right--micro-down {
     text-align: right; } }
 
 @media only screen and (max-width: 320px) {
-  .text-center-nano-down {
+  .text-center--nano-down {
     text-align: center; }
-  .text-left-nano-down {
+  .text-left--nano-down {
     text-align: left; }
-  .text-right-nano-down {
+  .text-right--nano-down {
     text-align: right; } }
 
 /*
