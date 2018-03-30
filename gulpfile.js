@@ -28,7 +28,7 @@ gulp.task('styles', function () {
           'opera 12'
         ]
       }))
-      .pipe(cssNano())
+      // .pipe(cssNano())
       .pipe(gulp.dest(paths.dist + 'styles'))
       .pipe(browserSync.stream());
 });
