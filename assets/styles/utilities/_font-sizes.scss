@@ -1,20 +1,37 @@
 /*----------------------------------*\
-    Element Display
+    Font sizes
 \*----------------------------------*/
+
+/* Font sizes class loop */
+@each $size in $font-sizes {
+  .fz-#{$size} {
+    font-size: $size * 1px;
+  }
+}
+
+/* Font sizes class loop - Responsive */
 @if $font-sizes-with-breakpoints {
-  @each $class, $point in $breakpoints-only {
+
+  /* Font sizes loop with postfix of breakpoints */
+  @each $class, $point in $breakpoints-up {
     @media #{$point} {
       @each $size in $font-sizes {
-        .font-#{$size} {
-          display: $size * 1px;
+        .fz-#{$size}--#{$class} {
+          font-size: $size * 1px;
         }
       }
     }
   }
-} @else {
-  @each $size in $font-sizes {
-    .font-#{$size} {
-      display: $size * 1px;
+  
+  /* Font sizes loop with postfix of breakpoints for breakpoint and down */
+  @each $class, $point in $breakpoints-down {
+    @media #{$point} {
+      @each $size in $font-sizes {
+        .fz-#{$size}--#{$class} {
+          font-size: $size * 1px;
+        }
+      }
     }
   }
 }
+
