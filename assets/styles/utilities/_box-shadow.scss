@@ -1,0 +1,37 @@
+/*----------------------------------*\
+    Box shadow
+\*----------------------------------*/
+
+/* Box shadow class loop */
+@each $key, $box-shadow in $box-shadows {
+  .#{$key} {
+    box-shadow: #{$box-shadow};
+  }
+}
+
+/* Box shadow class loop - Responsive */
+@if $box-shadows-with-breakpoints {
+
+  /* Box shadow loop with postfix of breakpoints */
+  @each $class, $point in $breakpoints-up {
+    @media #{$point} {
+      @each $key, $box-shadow in $box-shadows {
+        .#{$key}--#{$class} {
+          box-shadow: #{$box-shadow};
+        }
+      }
+    }
+  }
+  
+  /* Box shadow loop with postfix of breakpoints for breakpoint and down */
+  @each $class, $point in $breakpoints-down {
+    @media #{$point} {
+      @each $key, $box-shadow in $box-shadows {
+         .#{$key}--#{$class} {
+          box-shadow: #{$box-shadow};
+        }
+      }
+    }
+  }
+}
+

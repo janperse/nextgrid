@@ -1,0 +1,12 @@
+/*----------------------------------*\
+  	Variables - Box shadow
+\*----------------------------------*/
+/* Box shadow with breakpoints */
+$box-shadows-with-breakpoints: true;
+
+/* Opacity */
+$box-shadows: (
+  'shadow': 0 2px 4px 0 rgba(0,0,0,0.10),
+  'shadow-sm': 0 4px 8px 0 rgba(0,0,0,0.12),
+  'shadow-md': 0 15px 30px 0 rgba(0,0,0,0.11)
+)
