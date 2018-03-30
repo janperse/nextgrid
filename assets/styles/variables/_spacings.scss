@@ -1,5 +1,8 @@
 /*----------------------------------*\
   	Variables - Spacings
 \*----------------------------------*/
+/* Spacings with breakpoints */
+$spacing-classes-with-breakpoints: true;
+
 /* Sizes of spacings - Margin and Padding. Just change the numbers for different spacings, or add new ones */
 $spacing-sizes: 0, 6, 12, 18, 24, 30, 36, 48, 60, 72, 96, 120;
