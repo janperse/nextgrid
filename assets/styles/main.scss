@@ -4,19 +4,26 @@
 
 /*
  TABLE OF CONTENTS
-    01. Variables....................Imported via gulp and can be found in _vars.scss
-    02. Grid......................The general styles like align-center etc.
+    01. Variables.........................Imported via gulp and can be found in _vars.scss
+    02. Grid..............................Styles for grid
+    03. Utilities.........................The general styles like align-center etc.
 */
 
 /*
     Variables
 */
-@import "variables/vars";
+@import "vars";
+
+
+/*
+    Grid
+*/
+@import "grid/grid";
+@import "grid/col-offsets";
 
 /*
     Utilities
 */
-@import "utilities/col-offsets";
 @import "utilities/element-display";
 @import "utilities/element-size";
 @import "utilities/element-visibility";
@@ -24,8 +31,6 @@
 @import "utilities/spacings";
 @import "utilities/text";
 @import "utilities/font-sizes";
-
-/*
-    Grid
-*/
-@import "grid/grid";
+@import "utilities/opacity";
+@import "utilities/colors";
+@import "utilities/line-height";
