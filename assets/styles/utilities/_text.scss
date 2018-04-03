@@ -4,7 +4,7 @@
 /*
 	Align
 */
-$text-alignments: (center, left, right);
+$text-alignments: center, left, right;
 
 @each $align in $text-alignments {
   .text-#{$align} {

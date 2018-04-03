@@ -12,8 +12,7 @@
       }
     } @else {
       .border-#{$key}-#{$key2} {
-        border-#{$border-side}-width: #{$border-size}px;
-        border-style: solid;
+        border-#{$border-side}: #{$border-size}px solid;
       }
     }
   }
