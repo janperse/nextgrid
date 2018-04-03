@@ -1,18 +1,36 @@
 /*----------------------------------*\
     Element Size
 \*----------------------------------*/
+
 .element-full-w {
 	width: 100%;
 	max-width: 100%;
 	flex-basis: 100%;
 }
 
-@each $class, $point in $breakpoints-down {
-	@media #{$point}{
-		.element-full-w-#{$class} {
-			width: 100%;
-			max-width: 100%;
-			flex-basis: 100%;
-		}
-	}
+
+/* Display classes loop - Responsive */
+@if $element-size-with-breakpoints {
+
+  /* Display classes loop with postfix of breakpoints */
+  @each $class, $point in $breakpoints-up {
+    @media #{$point} {
+      .element-full-w-#{$class} {
+        width: 100%;
+				max-width: 100%;
+				flex-basis: 100%;
+	    }
+    }
+  }
+
+  /* Display classes loop with postfix of breakpoints and down */
+  @each $class, $point in $breakpoints-down {
+    @media #{$point} {
+      .element-full-w-#{$class} {
+        width: 100%;
+				max-width: 100%;
+				flex-basis: 100%;
+	    }
+    }
+  }
 }

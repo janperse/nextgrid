@@ -41,27 +41,6 @@
       }
     }
   }
-  
-  /* Borders size loop with postfix of breakpoints for breakpoint and down */
-  @each $class, $point in $breakpoints-down {
-    @media #{$point} {
-      @each $key, $border-side in $border-sides {
-        @each $key2, $border-size in $border-sizes {
-          @if $key == 'all' {
-            .border-#{$key2}-#{$class} {
-              border-width: #{$border-size}px;
-              border-style: solid;
-            }
-          } @else {
-            .border-#{$key}-#{$key2}-#{$class} {
-              border-#{$border-side}-width: #{$border-size}px;
-              border-style: solid;
-            }
-          }
-        }
-      }
-    }
-  }
 }
 
 /* Borders colors class loop */

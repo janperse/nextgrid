@@ -11,21 +11,23 @@
 }
 
 /* Override none property with appropriate one (flex, block, inline, inline-block). Use it as "visible-xs-flex" */
-@each $class, $point in $breakpoints-only {
-	@media #{$point} {
-		@each $property in $display-properties {
-			.visible-#{$class}-#{$property} {
-				display: $property !important;
+@if $element-visibility-with-breakpoints {
+	@each $class, $point in $breakpoints-up {
+		@media #{$point} {
+			@each $property in $display-properties {
+				.visible-#{$property}-#{$class} {
+					display: $property !important;
+				}
 			}
 		}
 	}
-}
 
-@each $class, $point in $breakpoints-down {
-	@media #{$point} {
-		@each $property in $display-properties {
-			.visible-#{$class}-#{$property} {
-				display: $property !important;
+	@each $class, $point in $breakpoints-down {
+		@media #{$point} {
+			@each $property in $display-properties {
+				.visible-#{$property}-#{$class} {
+					display: $property !important;
+				}
 			}
 		}
 	}
@@ -39,7 +41,8 @@
 }
 
 /* Add "display: none;" to the appropriate breakpoint. Use it as "hidden-xs" */
-@each $class, $point in $breakpoints-only {
+
+@each $class, $point in $breakpoints-up {
 	@media #{$point}{
 		.hidden-#{$class} {
 			display: none !important;

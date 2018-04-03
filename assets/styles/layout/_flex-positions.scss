@@ -7,6 +7,16 @@
 	}
 }
 
+@each $class, $point in $breakpoints-up {
+	@media #{$point}{
+		@for $i from 1 through 12 {
+			.flex__order-#{$i}-#{$class} {
+				order: $i;
+			}
+		}
+	}
+}
+
 @each $class, $point in $breakpoints-down {
 	@media #{$point}{
 		@for $i from 1 through 12 {

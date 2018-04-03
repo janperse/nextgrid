@@ -1,6 +1,10 @@
 /*----------------------------------*\
   	Variables - Element Display Properties
 \*----------------------------------*/
+/* Display properties with breakpoints */
+$display-properties-with-breakpoints: true !default;
+
+/* Display properties */
 $display-properties: (
   flex,
   block,

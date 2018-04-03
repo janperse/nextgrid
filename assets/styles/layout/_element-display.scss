@@ -1,23 +1,36 @@
 /*----------------------------------*\
     Element Display
 \*----------------------------------*/
-/* Element display with breakpoints */
-$element-display-with-breakpoints: true;
 
-@if $font-sizes-with-breakpoints {
-  @each $class, $point in $breakpoints-only {
+/* Display classes loop */
+@each $display in $display-properties {
+  .d-#{$display} {
+    display: $display;
+  }
+}
+
+/* Display classes loop - Responsive */
+@if $display-properties-with-breakpoints {
+
+  /* Display classes loop with postfix of breakpoints */
+  @each $class, $point in $breakpoints-up {
     @media #{$point} {
       @each $display in $display-properties {
-        .d-#{$display}-#{$point} {
+        .d-#{$display}-#{$class} {
           display: $display;
         }
       }
     }
   }
-} @else {
-  @each $display in $display-properties {
-    .d-#{$display} {
-      display: $display;
+
+  /* Display classes loop with postfix of breakpoints and down */
+  @each $class, $point in $breakpoints-down {
+    @media #{$point} {
+      @each $display in $display-properties {
+        .d-#{$display}-#{$class} {
+          display: $display;
+        }
+      }
     }
   }
 }
