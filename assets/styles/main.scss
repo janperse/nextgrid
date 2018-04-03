@@ -21,18 +21,26 @@
 @import "grid/grid";
 @import "grid/col-offsets";
 
+
+/*
+    Layout
+*/
+@import "layout/element-display";
+@import "layout/element-size";
+@import "layout/element-visibility";
+@import "layout/flex-positions";
+
+/*
+    Typography
+*/
+@import "typography/font-sizes";
+@import "typography/line-height";
+@import "typography/text";
+
 /*
     Utilities
 */
-@import "utilities/element-display";
-@import "utilities/element-size";
-@import "utilities/element-visibility";
-@import "utilities/flex-positions";
-@import "utilities/spacings";
-@import "utilities/text";
-@import "utilities/font-sizes";
-@import "utilities/opacity";
-@import "utilities/colors";
-@import "utilities/line-height";
-@import "utilities/box-shadow";
 @import "utilities/borders";
+@import "utilities/box-shadow";
+@import "utilities/colors";
+@import "utilities/opacity";
