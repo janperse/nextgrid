@@ -50,19 +50,20 @@
 .row {
   margin-right: -$gutter;
   margin-left: -$gutter;
+  flex-wrap: wrap;
 }
 
 /* Main flex class, without this, flex positioning is not working. Use "row" when using columns, if not, use "flex" */
 .flex,
 .row {
   display: flex;
-  flex-wrap: wrap;
 }
 
 /*
 	Flex alignment
 */
-$flex-directions: (row, row-reverse, column, column-reverse);
+$flex-directions: row, row-reverse, column, column-reverse;
+$flex-wrap-items: wrap, nowrap;
 $flex-justify-contents: (
   'start': flex-start,
   'end': flex-end,
@@ -109,6 +110,25 @@ $flex-align-selfs: (
       @each $direction in $flex-directions {
         &--#{$direction}-#{$class} {
           flex-direction: $direction;
+        }
+      }
+    }
+  }
+
+  /*
+    Flex wrapping items
+  */
+  @each $wrap in $flex-wrap-items {
+    &--#{$wrap} {
+      flex-wrap: $wrap;
+    }
+  }
+  
+  @each $class, $point in $breakpoints-up {
+    @media #{$point} {
+      @each $wrap in $flex-wrap-items {
+        &--#{$wrap}-#{$class} {
+          flex-wrap: $wrap;
         }
       }
     }
@@ -170,6 +190,7 @@ $flex-align-selfs: (
       }
     }
   }
+
   
   /*
     Properties for children - flex items
