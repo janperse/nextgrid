@@ -1,22 +1,6 @@
 /*----------------------------------*\
     Spacings
 \*----------------------------------*/
-/*
-	Margins and paddings
-*/
-/* Prefix classes for spacings */
-$spacing-classes: (
-	'p': padding,
-	'pt': padding-top,
-	'pb': padding-bottom,
-	'pr': padding-right,
-	'pl': padding-left,
-	'm': margin,
-	'mt': margin-top,
-	'mb': margin-bottom,
-	'mr': margin-right,
-	'ml': margin-left
-);
 
 /* Spacings class loop */
 @each $prefix, $meaning in $spacing-classes {
