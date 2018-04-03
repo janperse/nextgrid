@@ -1,57 +1,47 @@
 /*----------------------------------*\
   	Variables
 \*----------------------------------*/
-/*
-	Grid Options
-*/
+
+
+// Grid Options
 @import "./variables/grid";
 
-/*
-	Media Query Breakpoint Sizes
-*/
+
+// Media Query Breakpoint Sizes
 @import "./variables/breakpoint-sizes";
 
-/*
-	Media Queries
-*/
+
+// Media Queries
 @import "./variables/media-queries";
 
-/*
-	Element Display Properties
-*/
+
+// Element Display Properties
 @import "./variables/element-display";
 
-/*
-	Spacing Properties
-*/
+
+// Spacing Properties
 @import "./variables/spacings";
 
-/*
-	Font Properties
-*/
+
+// Font Properties
 @import "./variables/font-sizes";
 
-/*
-  Colors
-*/
+
+// Colors
 @import "./variables/colors";
 
-/*
-  Opacity
-*/
+
+// Opacity
 @import "./variables/opacity";
 
-/*
-  Line height
-*/
+
+// Line height
 @import "./variables/line-height";
 
-/*
-  Box shadow
-*/
+
+// Box shadow
 @import "./variables/box-shadow";
 
-/*
-  Borders
-*/
+
+// Borders
 @import "./variables/borders";

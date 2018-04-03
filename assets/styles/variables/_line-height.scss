@@ -2,7 +2,7 @@
   	Variables - Line height
 \*----------------------------------*/
 /* Line height with breakpoints */
-$line-heights-with-breakpoints: true;
+$line-heights-with-breakpoints: true !default;
 
 /* Line height */
 $line-heights: (
@@ -13,4 +13,4 @@ $line-heights: (
   '1-4': 1.4,
   '2': 2,
   '2-1': 2.1
-);
+) !default;

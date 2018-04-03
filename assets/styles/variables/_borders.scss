@@ -2,7 +2,7 @@
   	Variables - Borders
 \*----------------------------------*/
 /* Borders with breakpoints */
-$borders-with-breakpoints: true;
+$borders-with-breakpoints: true !default;
 
 /* Borders */
 $border-sides: (
@@ -11,7 +11,7 @@ $border-sides: (
   'r': right,
   'b': bottom,
   'l': left
-);
+) !default;
 
 $border-sizes: (
   '0': 0,
@@ -19,4 +19,4 @@ $border-sizes: (
   '2': 2,
   '3': 3,
   '4': 4
-);
+) !default;

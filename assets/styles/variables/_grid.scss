@@ -2,12 +2,12 @@
   	Variables - Grid Options
 \*----------------------------------*/
 /* Desktop */
-$gutter: 12px;
-$gutter-container: 12px;
+$gutter: 12px !default;
+$gutter-container: 12px !default;
 
 /* Mobile */
-$gutter-mobile: $gutter;
-$gutter-container-mobile: $gutter-container;
+$gutter-mobile: $gutter !default;
+$gutter-container-mobile: $gutter-container !default;
 
 /* Container */
-$container-max-width: 100%;
+$container-max-width: 100% !default;
