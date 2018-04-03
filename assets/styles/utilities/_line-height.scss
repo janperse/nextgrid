@@ -16,7 +16,7 @@
   @each $class, $point in $breakpoints-up {
     @media #{$point} {
       @each $key, $single-line-height in $line-heights {
-        .lh-#{$key}--#{$class} {
+        .lh-#{$key}-#{$class} {
           line-height: $single-line-height;
         }
       }
@@ -27,7 +27,7 @@
   @each $class, $point in $breakpoints-down {
     @media #{$point} {
       @each $key, $single-line-height in $line-heights {
-        .lh-#{$key}--#{$class} {
+        .lh-#{$key}-#{$class} {
           line-height: $single-line-height;
         }
       }

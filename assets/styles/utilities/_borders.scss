@@ -27,12 +27,12 @@
       @each $key, $border-side in $border-sides {
         @each $key2, $border-size in $border-sizes {
           @if $key == 'all' {
-            .border-#{$key2}--#{$class} {
+            .border-#{$key2}-#{$class} {
               border-width: #{$border-size}px;
               border-style: solid;
             }
           } @else {
-            .border-#{$key}-#{$key2}--#{$class} {
+            .border-#{$key}-#{$key2}-#{$class} {
               border-#{$border-side}-width: #{$border-size}px;
               border-style: solid;
             }
@@ -48,12 +48,12 @@
       @each $key, $border-side in $border-sides {
         @each $key2, $border-size in $border-sizes {
           @if $key == 'all' {
-            .border-#{$key2}--#{$class} {
+            .border-#{$key2}-#{$class} {
               border-width: #{$border-size}px;
               border-style: solid;
             }
           } @else {
-            .border-#{$key}-#{$key2}--#{$class} {
+            .border-#{$key}-#{$key2}-#{$class} {
               border-#{$border-side}-width: #{$border-size}px;
               border-style: solid;
             }

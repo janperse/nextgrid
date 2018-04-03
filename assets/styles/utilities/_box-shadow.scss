@@ -16,7 +16,7 @@
   @each $class, $point in $breakpoints-up {
     @media #{$point} {
       @each $key, $box-shadow in $box-shadows {
-        .#{$key}--#{$class} {
+        .#{$key}-#{$class} {
           box-shadow: #{$box-shadow};
         }
       }
@@ -27,7 +27,7 @@
   @each $class, $point in $breakpoints-down {
     @media #{$point} {
       @each $key, $box-shadow in $box-shadows {
-         .#{$key}--#{$class} {
+         .#{$key}-#{$class} {
           box-shadow: #{$box-shadow};
         }
       }

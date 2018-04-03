@@ -8,7 +8,7 @@ $element-display-with-breakpoints: true;
   @each $class, $point in $breakpoints-only {
     @media #{$point} {
       @each $display in $display-properties {
-        .d-#{$display}--#{$point} {
+        .d-#{$display}-#{$point} {
           display: $display;
         }
       }

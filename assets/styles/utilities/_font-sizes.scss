@@ -16,7 +16,7 @@
   @each $class, $point in $breakpoints-up {
     @media #{$point} {
       @each $size in $font-sizes {
-        .fz-#{$size}--#{$class} {
+        .fz-#{$size}-#{$class} {
           font-size: $size * 1px;
         }
       }
@@ -27,7 +27,7 @@
   @each $class, $point in $breakpoints-down {
     @media #{$point} {
       @each $size in $font-sizes {
-        .fz-#{$size}--#{$class} {
+        .fz-#{$size}-#{$class} {
           font-size: $size * 1px;
         }
       }

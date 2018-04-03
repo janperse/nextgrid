@@ -16,7 +16,7 @@
   @each $class, $point in $breakpoints-up {
     @media #{$point} {
       @each $key, $single-opacity in $opacity {
-        .opacity-#{$key}--#{$class} {
+        .opacity-#{$key}-#{$class} {
           opacity: $single-opacity;
         }
       }
@@ -27,7 +27,7 @@
   @each $class, $point in $breakpoints-down {
     @media #{$point} {
       @each $key, $single-opacity in $opacity {
-        .opacity-#{$key}--#{$class} {
+        .opacity-#{$key}-#{$class} {
           opacity: $single-opacity;
         }
       }
