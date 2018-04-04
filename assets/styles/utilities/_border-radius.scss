@@ -1,0 +1,127 @@
+/*----------------------------------*\
+    Borders
+\*----------------------------------*/
+
+/* Border radius class loop */
+@each $key, $border-radius in $border-radius-sizes {
+  .rounded-#{$key} {
+    border-radius: #{$border-radius};
+  }
+}
+
+/* Borders size class loop */
+@each $key, $border-radius-side in $border-radius-sides {
+  @each $key2, $border-radius-size in $border-radius-sizes {
+    @if $key == 'all' {
+      .rounded-#{$key2} {
+        border-radius: #{$border-radius-size};
+      }
+    } @else if $key == 't' {
+      .rounded-#{$key}-#{$key2} {
+        border-top-left-radius: #{$border-radius-size};
+        border-top-right-radius: #{$border-radius-size};
+      }
+    } @else if $key == 'r' {
+      .rounded-#{$key}-#{$key2} {
+        border-top-right-radius: #{$border-radius-size};
+        border-bottom-right-radius: #{$border-radius-size};
+      }
+    } @else if $key == 'b' {
+      .rounded-#{$key}-#{$key2} {
+        border-bottom-left-radius: #{$border-radius-size};
+        border-bottom-right-radius: #{$border-radius-size};
+      }
+    } @else if $key == 'l' {
+      .rounded-#{$key}-#{$key2} {
+        border-bottom-left-radius: #{$border-radius-size};
+        border-top-left-radius: #{$border-radius-size};
+      }
+    } @else {
+      .rounded-#{$key}-#{$key2} {
+        border-#{$border-radius-side}-radius: #{$border-radius-size};
+      }
+    }
+  }
+}
+
+/* Border radius class loop - Responsive */
+@if $border-radius-with-breakpoints {
+
+  /* Border radius loop with postfix of breakpoints */
+  @each $class, $point in $breakpoints-up {
+    @media #{$point} {
+      @each $key, $border-radius-side in $border-radius-sides {
+        @each $key2, $border-radius-size in $border-radius-sizes {
+          @if $key == 'all' {
+            .rounded-#{$key2}-#{$class} {
+              border-radius: #{$border-radius-size};
+            }
+          } @else if $key == 't' {
+            .rounded-#{$key}-#{$key2}-#{$class} {
+              border-top-left-radius: #{$border-radius-size};
+              border-top-right-radius: #{$border-radius-size};
+            }
+          } @else if $key == 'r' {
+            .rounded-#{$key}-#{$key2}-#{$class} {
+              border-top-right-radius: #{$border-radius-size};
+              border-bottom-right-radius: #{$border-radius-size};
+            }
+          } @else if $key == 'b' {
+            .rounded-#{$key}-#{$key2}-#{$class} {
+              border-bottom-left-radius: #{$border-radius-size};
+              border-bottom-right-radius: #{$border-radius-size};
+            }
+          } @else if $key == 'l' {
+            .rounded-#{$key}-#{$key2}-#{$class} {
+              border-bottom-left-radius: #{$border-radius-size};
+              border-top-left-radius: #{$border-radius-size};
+            }
+          } @else {
+            .rounded-#{$key}-#{$key2}-#{$class} {
+              border-#{$border-radius-side}-radius: #{$border-radius-size};
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  /* Border radius loop with postfix of breakpoints for breakpoint and down */
+  @each $class, $point in $breakpoints-down {
+    @media #{$point} {
+      @each $key, $border-radius-side in $border-radius-sides {
+        @each $key2, $border-radius-size in $border-radius-sizes {
+          @if $key == 'all' {
+            .rounded-#{$key2}-#{$class} {
+              border-radius: #{$border-radius-size};
+            }
+          } @else if $key == 't' {
+            .rounded-#{$key}-#{$key2}-#{$class} {
+              border-top-left-radius: #{$border-radius-size};
+              border-top-right-radius: #{$border-radius-size};
+            }
+          } @else if $key == 'r' {
+            .rounded-#{$key}-#{$key2}-#{$class} {
+              border-top-right-radius: #{$border-radius-size};
+              border-bottom-right-radius: #{$border-radius-size};
+            }
+          } @else if $key == 'b' {
+            .rounded-#{$key}-#{$key2}-#{$class} {
+              border-bottom-left-radius: #{$border-radius-size};
+              border-bottom-right-radius: #{$border-radius-size};
+            }
+          } @else if $key == 'l' {
+            .rounded-#{$key}-#{$key2}-#{$class} {
+              border-bottom-left-radius: #{$border-radius-size};
+              border-top-left-radius: #{$border-radius-size};
+            }
+          } @else {
+            .rounded-#{$key}-#{$key2}-#{$class} {
+              border-#{$border-radius-side}-radius: #{$border-radius-size};
+            }
+          }
+        }
+      }
+    }
+  }
+}

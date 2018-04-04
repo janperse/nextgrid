@@ -1,0 +1,31 @@
+/*----------------------------------*\
+  	Variables - Border radius
+\*----------------------------------*/
+/* Border radius with breakpoints */
+$border-radius-with-breakpoints: false !default;
+
+/* Border radius */
+$border-radius-sizes: (
+  'none': 0,
+  '1': 1px,
+  '2': 2px,
+  '3': 3px,
+  '4': 4px,
+  '5': 5px,
+  '10': 10px,
+  '15': 15px,
+  'full': 9999px
+) !default;
+
+$border-radius-sides: (
+  'all': '',
+  't': top,
+  'l': left,
+  'r': right,
+  'b': bottom,
+
+  'tl': top-left,
+  'tr': top-right,
+  'bl': bottom-left,
+  'br': bottom-right,
+);
