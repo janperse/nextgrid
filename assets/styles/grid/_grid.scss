@@ -229,6 +229,25 @@ $flex-align-selfs: (
   width: 100%;
 }
 
+/* Create basic columns */
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  padding-right: $gutter;
+  padding-left: $gutter;
+}
+
+@each $class, $point in $breakpoints-up {
+  @media #{$point}{
+    .col-#{$class} {
+      flex-basis: 0;
+      flex-grow: 1;
+      max-width: 100%;
+    }
+  }
+}
+
 /* Set column width */
 @mixin col-width($width) {
   max-width: $width;
