@@ -1048,7 +1048,9 @@
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    max-width: 100%; } }
+    max-width: 100%;
+    padding-right: 12px;
+    padding-left: 12px; } }
 
 @media only screen and (min-width: 321px) {
   .col-micro {
@@ -1057,7 +1059,9 @@
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    max-width: 100%; } }
+    max-width: 100%;
+    padding-right: 12px;
+    padding-left: 12px; } }
 
 @media only screen and (min-width: 480px) {
   .col-xs {
@@ -1066,7 +1070,9 @@
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    max-width: 100%; } }
+    max-width: 100%;
+    padding-right: 12px;
+    padding-left: 12px; } }
 
 @media only screen and (min-width: 768px) {
   .col-sm {
@@ -1075,7 +1081,9 @@
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    max-width: 100%; } }
+    max-width: 100%;
+    padding-right: 12px;
+    padding-left: 12px; } }
 
 @media only screen and (min-width: 992px) {
   .col-md {
@@ -1084,7 +1092,9 @@
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    max-width: 100%; } }
+    max-width: 100%;
+    padding-right: 12px;
+    padding-left: 12px; } }
 
 @media only screen and (min-width: 1200px) {
   .col-lg {
@@ -1093,7 +1103,9 @@
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    max-width: 100%; } }
+    max-width: 100%;
+    padding-right: 12px;
+    padding-left: 12px; } }
 
 @media only screen and (min-width: 1440px) {
   .col-xl {
@@ -1102,7 +1114,9 @@
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    max-width: 100%; } }
+    max-width: 100%;
+    padding-right: 12px;
+    padding-left: 12px; } }
 
 /* Set column width */
 /* Create columns from sizes 1-12 */

@@ -244,6 +244,8 @@ $flex-align-selfs: (
       flex-basis: 0;
       flex-grow: 1;
       max-width: 100%;
+      padding-right: $gutter;
+      padding-left: $gutter;
     }
   }
 }
