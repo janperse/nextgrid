@@ -4,12 +4,15 @@
 
 /*
  TABLE OF CONTENTS
-    01. Variables.........................All variable files imported in single file - _vars.scss
-    02. Grid..............................Styles for grid
-    03. Layout............................Element styles and flex positions
-    04. Typography........................Font sizes, Line heights, Font weights, Text align etc.
-    05. Utilities.........................Other classes for colors, borders, box-shadows, opacity
+    01. Normalize.........................Import normalize.css - for more info check https://github.com/necolas/normalize.css/
+    02. Variables.........................All variable files imported in single file - _vars.scss
+    03. Grid..............................Styles for grid
+    04. Layout............................Element styles and flex positions
+    05. Typography........................Font sizes, Line heights, Font weights, Text align etc.
+    06. Utilities.........................Other classes for colors, borders, box-shadows, opacity
 */
+
+@import "./../../node_modules/normalize.css/normalize";
 
 /*
     Variables
@@ -50,6 +53,7 @@
     Utilities
 */
 @import "utilities/borders";
+@import "utilities/border-radius";
 @import "utilities/box-shadow";
 @import "utilities/colors";
 @import "utilities/opacity";
