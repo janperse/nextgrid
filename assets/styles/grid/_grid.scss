@@ -230,10 +230,14 @@ $flex-align-selfs: (
 }
 
 /* Create basic columns */
+@mixin col-flex($basis, $grow, $width) {
+  flex-basis: $basis;
+  flex-grow: $grow;
+  max-width: $width;
+}
+
 .col {
-  flex-basis: 0;
-  flex-grow: 1;
-  max-width: 100%;
+  @include col-flex(0, 1, 100%);
   padding-right: $gutter;
   padding-left: $gutter;
 }
@@ -241,11 +245,7 @@ $flex-align-selfs: (
 @each $class, $point in $breakpoints-up {
   @media #{$point}{
     .col-#{$class} {
-      flex-basis: 0;
-      flex-grow: 1;
-      max-width: 100%;
-      padding-right: $gutter;
-      padding-left: $gutter;
+      @include col-flex(0, 1, 100%);
     }
   }
 }
