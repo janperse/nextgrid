@@ -7,7 +7,8 @@
     03. Grid..............................Styles for grid
     04. Layout............................Element styles and flex positions
     05. Typography........................Font sizes, Line heights, Font weights, Text align etc.
-    06. Utilities.........................Other classes for colors, borders, box-shadows, opacity
+    06. Borders...........................Border sizes, border radius, border colors etc.
+    07. Utilities.........................Other classes for colors, borders, box-shadows, opacity
 */
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -7427,9 +7428,9 @@ template {
   font-weight: 900; }
 
 /*
-    Utilities
+    Borders
 */
-/*----------------------------------*    Borders
+/*----------------------------------*    Border sizes
 \*----------------------------------*/
 /* Borders size class loop */
 .border-0 {
@@ -8053,10 +8054,6 @@ template {
     border-left-width: 4px;
     border-left-style: solid; } }
 
-/* Borders colors class loop */
-.border-color-blue {
-  border-color: #0000FF; }
-
 /*----------------------------------*    Borders
 \*----------------------------------*/
 /* Border radius class loop */
@@ -8368,6 +8365,15 @@ template {
   border-bottom-right-radius: 9999px; }
 
 /* Border radius class loop - Responsive */
+/*----------------------------------*    Border colors
+\*----------------------------------*/
+/* Borders colors class loop */
+.border-color-blue {
+  border-color: #0000FF; }
+
+/*
+    Utilities
+*/
 /*----------------------------------*    Box shadow
 \*----------------------------------*/
 /* Box shadow class loop */
