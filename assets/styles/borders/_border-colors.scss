@@ -1,0 +1,10 @@
+/*----------------------------------*\
+    Border colors
+\*----------------------------------*/
+
+/* Borders colors class loop */
+@each $key, $border-color in $colors {
+  .border-color-#{$key} {
+    border-color: #{$border-color};
+  }
+}

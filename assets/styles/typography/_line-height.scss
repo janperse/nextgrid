@@ -1,0 +1,37 @@
+/*----------------------------------*\
+    Opacity
+\*----------------------------------*/
+
+/* Opacity class loop */
+@each $key, $single-line-height in $line-heights {
+  .lh-#{$key} {
+    line-height: $single-line-height;
+  }
+}
+
+/* Opacity class loop - Responsive */
+@if $line-heights-with-breakpoints {
+
+  /* Opacity loop with postfix of breakpoints */
+  @each $class, $point in $breakpoints-up {
+    @media #{$point} {
+      @each $key, $single-line-height in $line-heights {
+        .lh-#{$key}-#{$class} {
+          line-height: $single-line-height;
+        }
+      }
+    }
+  }
+  
+  /* Opacity loop with postfix of breakpoints for breakpoint and down */
+  @each $class, $point in $breakpoints-down {
+    @media #{$point} {
+      @each $key, $single-line-height in $line-heights {
+        .lh-#{$key}-#{$class} {
+          line-height: $single-line-height;
+        }
+      }
+    }
+  }
+}
+

@@ -4,11 +4,21 @@
 /*
 	Align
 */
-$text-alignments: (center, left, right);
+$text-alignments: center, left, right;
 
 @each $align in $text-alignments {
   .text-#{$align} {
     text-align: $align;
+  }
+}
+
+@each $class, $point in $breakpoints-up {
+  @media #{$point}{
+    @each $align in $text-alignments {
+      .text-#{$align}-#{$class} {
+        text-align: $align;
+      }
+    }
   }
 }
 
@@ -29,15 +39,31 @@ $text-alignments: (center, left, right);
   text-decoration: none;
 }
 
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-line-through {
+  text-decoration: line-through;
+}
+
 /*
 	Transform
 */
+.text-normal {
+  text-transform: none;
+}
+
 .text-uppercase {
   text-transform: uppercase;
 }
 
 .text-lowercase {
   text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
 }
 
 /*
@@ -59,20 +85,20 @@ $text-alignments: (center, left, right);
  */
 /* Variables */
 $font-weights: (
-  'thin': 100,
-  'light': 200,
-  'book': 300,
+  'hairline': 100,
+  'thin': 200,
+  'light': 300,
   'normal': 400,
   'medium': 500,
-  'semi-bold': 600,
+  'semibold': 600,
   'bold': 700,
-  'extra-bold': 800,
+  'extrabold': 800,
   'black': 900
 );
 
 /* Classes */
 @each $prefix, $meaning in $font-weights {
-  .text-#{$prefix} {
+  .font-#{$prefix} {
     font-weight: $meaning;
   }
 }

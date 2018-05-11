@@ -1,0 +1,22 @@
+/*----------------------------------*\
+  	Variables - Borders
+\*----------------------------------*/
+/* Borders with breakpoints */
+$borders-with-breakpoints: true !default;
+
+/* Borders */
+$border-sides: (
+  'all': '',
+  't': top,
+  'r': right,
+  'b': bottom,
+  'l': left
+) !default;
+
+$border-sizes: (
+  '0': 0,
+  '1': 1,
+  '2': 2,
+  '3': 3,
+  '4': 4
+) !default;

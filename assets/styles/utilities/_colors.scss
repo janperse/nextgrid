@@ -1,0 +1,21 @@
+/*----------------------------------*\
+    Colors
+\*----------------------------------*/
+
+@function color($color) {
+  @return map-get($colors, $color);
+}
+
+// Make color classes
+@each $prefix, $meaning in $colors {
+  .color-#{$prefix} {
+    color: $meaning;
+  }
+}
+
+// Make background color classes
+@each $prefix, $meaning in $colors {
+  .bg-#{$prefix} {
+    background-color: $meaning;
+  }
+}

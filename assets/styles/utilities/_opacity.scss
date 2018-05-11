@@ -1,0 +1,37 @@
+/*----------------------------------*\
+    Opacity
+\*----------------------------------*/
+
+/* Opacity class loop */
+@each $key, $single-opacity in $opacity {
+  .opacity-#{$key} {
+    opacity: $single-opacity;
+  }
+}
+
+/* Opacity class loop - Responsive */
+@if $opacity-with-breakpoints {
+
+  /* Opacity loop with postfix of breakpoints */
+  @each $class, $point in $breakpoints-up {
+    @media #{$point} {
+      @each $key, $single-opacity in $opacity {
+        .opacity-#{$key}-#{$class} {
+          opacity: $single-opacity;
+        }
+      }
+    }
+  }
+  
+  /* Opacity loop with postfix of breakpoints for breakpoint and down */
+  @each $class, $point in $breakpoints-down {
+    @media #{$point} {
+      @each $key, $single-opacity in $opacity {
+        .opacity-#{$key}-#{$class} {
+          opacity: $single-opacity;
+        }
+      }
+    }
+  }
+}
+

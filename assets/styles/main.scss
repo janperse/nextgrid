@@ -4,28 +4,64 @@
 
 /*
  TABLE OF CONTENTS
-    01. Variables....................Imported via gulp and can be found in _vars.scss
-    02. Grid......................The general styles like align-center etc.
+    01. Normalize.........................Import normalize.css - for more info check https://github.com/necolas/normalize.css/
+    02. Variables.........................All variable files imported in single file - _vars.scss
+    03. Grid..............................Styles for grid
+    04. Layout............................Element styles and flex positions
+    05. Typography........................Font sizes, Line heights, Font weights, Text align etc.
+    06. Borders...........................Border sizes, border radius, border colors etc.
+    07. Utilities.........................Other classes for colors, borders, box-shadows, opacity
 */
+
+@import "./../../node_modules/normalize.css/normalize";
 
 /*
     Variables
 */
-@import "variables/vars";
+@import "vars";
 
-/*
-    Utilities
-*/
-@import "utilities/col-offsets";
-@import "utilities/element-display";
-@import "utilities/element-size";
-@import "utilities/element-visibility";
-@import "utilities/flex-positions";
-@import "utilities/spacings";
-@import "utilities/text";
-@import "utilities/font-sizes";
 
 /*
     Grid
 */
 @import "grid/grid";
+@import "grid/col-offsets";
+
+
+/*
+    Layout
+*/
+@import "layout/element-display";
+@import "layout/element-size";
+@import "layout/element-visibility";
+@import "layout/flex-positions";
+
+
+/*
+    Spacings
+*/
+@import "spacings/spacings";
+
+
+/*
+    Typography
+*/
+@import "typography/font-sizes";
+@import "typography/line-height";
+@import "typography/text";
+
+
+/*
+    Borders
+*/
+@import "borders/border-sizes";
+@import "borders/border-radius";
+@import "borders/border-colors";
+
+
+/*
+    Utilities
+*/
+@import "utilities/box-shadow";
+@import "utilities/colors";
+@import "utilities/opacity";

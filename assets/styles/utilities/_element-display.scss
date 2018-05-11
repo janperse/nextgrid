@@ -1,8 +1,0 @@
-/*----------------------------------*\
-    Element Display
-\*----------------------------------*/
-@each $display in $display-properties {
-  .element-#{$display} {
-    display: $display;
-  }
-}

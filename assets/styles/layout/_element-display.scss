@@ -1,0 +1,37 @@
+/*----------------------------------*\
+    Element Display
+\*----------------------------------*/
+
+/* Display classes loop */
+@each $display in $display-properties {
+  .d-#{$display} {
+    display: $display;
+  }
+}
+
+/* Display classes loop - Responsive */
+@if $display-properties-with-breakpoints {
+
+  /* Display classes loop with postfix of breakpoints */
+  @each $class, $point in $breakpoints-up {
+    @media #{$point} {
+      @each $display in $display-properties {
+        .d-#{$display}-#{$class} {
+          display: $display;
+        }
+      }
+    }
+  }
+
+  /* Display classes loop with postfix of breakpoints and down */
+  @each $class, $point in $breakpoints-down {
+    @media #{$point} {
+      @each $display in $display-properties {
+        .d-#{$display}-#{$class} {
+          display: $display;
+        }
+      }
+    }
+  }
+}
+

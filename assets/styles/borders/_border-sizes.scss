@@ -1,0 +1,44 @@
+/*----------------------------------*\
+    Border sizes
+\*----------------------------------*/
+
+/* Borders size class loop */
+@each $key, $border-side in $border-sides {
+  @each $key2, $border-size in $border-sizes {
+    @if $key == 'all' {
+      .border-#{$key2} {
+        border-width: #{$border-size}px;
+        border-style: solid;
+      }
+    } @else {
+      .border-#{$key}-#{$key2} {
+        border-#{$border-side}: #{$border-size}px solid;
+      }
+    }
+  }
+}
+
+/* Borders size class loop - Responsive */
+@if $borders-with-breakpoints {
+
+  /* Borders size loop with postfix of breakpoints */
+  @each $class, $point in $breakpoints-up {
+    @media #{$point} {
+      @each $key, $border-side in $border-sides {
+        @each $key2, $border-size in $border-sizes {
+          @if $key == 'all' {
+            .border-#{$key2}-#{$class} {
+              border-width: #{$border-size}px;
+              border-style: solid;
+            }
+          } @else {
+            .border-#{$key}-#{$key2}-#{$class} {
+              border-#{$border-side}-width: #{$border-size}px;
+              border-#{$border-side}-style: solid;
+            }
+          }
+        }
+      }
+    }
+  }
+}
