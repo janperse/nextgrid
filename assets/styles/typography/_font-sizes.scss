@@ -3,9 +3,9 @@
 \*----------------------------------*/
 
 /* Font sizes class loop */
-@each $size in $font-sizes {
-  .fz-#{$size} {
-    font-size: $size * 1px;
+@each $name, $size in $font-sizes {
+  .fz-#{$name} {
+    font-size: $size;
   }
 }
 
@@ -15,9 +15,9 @@
   /* Font sizes loop with postfix of breakpoints */
   @each $class, $point in $breakpoints-up {
     @media #{$point} {
-      @each $size in $font-sizes {
-        .fz-#{$size}-#{$class} {
-          font-size: $size * 1px;
+      @each $name, $size in $font-sizes {
+        .fz-#{$name}-#{$class} {
+          font-size: $size;
         }
       }
     }
@@ -26,9 +26,9 @@
   /* Font sizes loop with postfix of breakpoints for breakpoint and down */
   @each $class, $point in $breakpoints-down {
     @media #{$point} {
-      @each $size in $font-sizes {
-        .fz-#{$size}-#{$class} {
-          font-size: $size * 1px;
+      @each $name, $size in $font-sizes {
+        .fz-#{$name}-#{$class} {
+          font-size: $size;
         }
       }
     }

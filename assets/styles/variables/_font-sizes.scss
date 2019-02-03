@@ -5,4 +5,14 @@
 $font-sizes-with-breakpoints: true !default;
 
 /* Font Sizes */
-$font-sizes: 10, 11, 12, 14, 16, 18, 24, 30, 36 !default;
+$font-sizes: (
+        'giga': 64px,
+        'mega': 48px,
+        'alpha': 36px,
+        'beta': 30px,
+        'gamma': 24px,
+        'delta': 20px,
+        'epsilon': 16px,
+        'zeta': 14px,
+        'omega': 12px
+);
